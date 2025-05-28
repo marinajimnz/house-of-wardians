@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.8.0"
+    "astro": "^5.8.0",
+    "astro-icon": "^1.1.5"
   },
   "devDependencies": {
     "@fontsource/anton": "^5.2.5",
