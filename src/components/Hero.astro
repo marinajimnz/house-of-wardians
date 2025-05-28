@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Queen from '../assets/images/archer-queen.webp';
+import King from '../assets/images/barbarian-king.webp';
+import LogoStudio from '../assets/images/logo-nakama.webp';
+import LogoGame from '../assets/images/logo-how.webp';
+---
+
+<Layout>
+  <section
+    class="relative h-screen bg-cover bg-center overflow-hidden flex items-center justify-center px-6"
+    style="background-image: url('/background.png'); background-size: cover; background-repeat: no-repeat;"
+  >
+    <!-- HEADER: logos y redes -->
+    <div class="absolute top-4 left-4 z-20">
+      <Image src={LogoStudio} alt="Nakama Game Studio" class="w-24 md:w-32" />
+    </div>
+
+    <div class="absolute top-4 right-4 flex gap-4 z-20">
+      <a href="#" class="w-6 md:w-8">
+        <img src="" alt="Instagram" />
+      </a>
+      <a href="#" class="w-6 md:w-8">
+        <img src="" alt="TikTok" />
+      </a>
+      <a href="#" class="w-6 md:w-8">
+        <img src="" alt="YouTube" />
+      </a>
+    </div>
+
+    <!-- Logo principal -->
+    <div class="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+      <Image src={LogoGame} alt="House of Wardians" class="w-60 md:w-80" />
+    </div>
+
+    <!-- Contenido central -->
+    <div class="relative z-10 text-center">
+      <h2 class="font-anton text-white text-4xl md:text-5xl drop-shadow-[4px_4px_0_rgba(0,0,0,1)] -rotate-2"
+          style="-webkit-text-stroke: 1px black;">
+        ¡LLEGAN LOS
+      </h2>
+      <h1 class="font-anton text-white text-7xl md:text-[120px] leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2"
+          style="-webkit-text-stroke: 3px black;">
+        HÉROES!
+      </h1>
+
+      <a
+        href="/juego"
+        class="mt-8 inline-block px-6 py-3 bg-yellow-400 border-[3px] border-black rounded-lg shadow-[0_4px_0_0_rgba(0,0,0,1)] text-black font-extrabold text-lg tracking-wide hover:bg-yellow-300 transition-transform active:translate-y-1"
+      >
+        ¡JUEGA AHORA!
+      </a>
+    </div>
+
+    <!-- Personajes -->
+    <div class="absolute bottom-0 left-0 w-44 md:w-96 lg:w-[32rem] z-0">
+      <Image src={Queen} alt="Archer Queen" />
+    </div>
+    <div class="absolute bottom-0 right-0 w-44 md:w-96 lg:w-[32rem] z-0">
+      <Image src={King} alt="Barbarian King" />
+    </div>
+  </section>
+</Layout>
