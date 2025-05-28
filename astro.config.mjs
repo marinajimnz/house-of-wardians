@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 
+import icon from 'astro-icon';
+
 export default defineConfig({
-  // sin necesidad de configurar nada para Tailwind
+  integrations: [icon()]
 });
