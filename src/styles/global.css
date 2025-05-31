@@ -2,5 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fuente Anton correctamente importada */
-@import "@fontsource/anton";
+body {
+  font-family: 'Lilita One', cursive;
+}
