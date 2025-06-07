@@ -1,7 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import "../styles/global.css";
+import Pattern from "../components/Pattern.astro";
 
 import Croco from "../assets/images/croco.gif";
 import Human from "../assets/images/human.gif";
@@ -10,7 +10,7 @@ import Human from "../assets/images/human.gif";
 <section
   class="sticky top-0 h-screen z-20 bg-[url('/purple-background.png')] bg-cover bg-center bg-fixed text-white flex items-center justify-center px-6 overflow-hidden"
 >
-  <!-- Fondo parallax icónico -->
+  <Pattern />
 
   <div
     class="absolute bottom-0 mb-14 left-20 z-10 w-44 md:w-80 lg:w-4/12 transform -scale-x-100"

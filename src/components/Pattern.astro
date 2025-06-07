@@ -1,0 +1,31 @@
+---
+
+---
+
+<div class="pattern-bg" aria-hidden="true"></div>
+
+<style>
+  .pattern-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    opacity: 0.05;
+    background-image: url("/pattern.png"); 
+    background-repeat: repeat;
+    background-size: 200px;
+    animation: scrollDiagonal 80s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @keyframes scrollDiagonal {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+</style>
