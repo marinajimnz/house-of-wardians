@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import "../styles/global.css";
+
+import Croco from "../assets/images/croco.gif";
+import Human from "../assets/images/human.gif";
+---
+
+<section
+  class="sticky top-0 h-screen z-20 bg-[url('/purple-background.png')] bg-cover bg-center bg-fixed text-white flex items-center justify-center px-6 overflow-hidden"
+>
+  <!-- Fondo parallax icónico -->
+
+  <div
+    class="absolute bottom-0 mb-14 left-20 z-10 w-44 md:w-80 lg:w-4/12 transform -scale-x-100"
+  >
+    <div class="relative">
+      <Image src={Human} alt="Human" />
+      <div
+        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full blur-md z-0"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 mb-14 right-0 z-20 w-44 md:w-80 lg:w-6/12">
+    <div class="relative">
+      <Image src={Croco} alt="Croco" />
+      <div
+        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full blur-md z-0"
+      >
+      </div>
+    </div>
+  </div>
+
+  <!-- TÍTULOS -->
+  <div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
+    <h2
+      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 uppercase"
+    >
+      prepárate.
+    </h2>
+    <h2
+      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 uppercase"
+    >
+      enfréntalos.
+    </h2>
+    <h2
+      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 uppercase"
+    >
+      véncelos.
+    </h2>
+    <p
+      class="font-lilita mt-6 text-lg md:text-xl text-white/90 max-w-xl mx-auto"
+    >
+      House of Wardians es un juego de lucha estratégico con combate automático,
+      centrado en la gestión y evolución de luchadores.
+    </p>
+  </div>
+</section>
