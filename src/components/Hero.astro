@@ -8,6 +8,7 @@ import Gorilla from "../assets/images/gorilla.webp";
 import Panda from "../assets/images/panda.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
+import Beta from "../assets/images/beta.webp"; 
 ---
 
 <section
@@ -55,12 +56,44 @@ import LogoGame from "../assets/images/logo-how.webp";
     >
       WARDIANS!
     </h1>
-    <a
-      href="https://houseofwardians.com"
-      class="font-lilita blank mt-10 inline-block px-8 py-5 bg-yellow-400 border-[3px] border-black rounded-lg shadow-[0_4px_0_0_rgba(0,0,0,1)] text-black font-extrabold text-lg tracking-wide hover:bg-yellow-300 transition-transform active:translate-y-1"
-    >
-      ¡JUEGA AHORA!
-    </a>
+    <div> 
+      <a href="#" class="flex justify-center mt-8">
+          <Image src={Beta} alt="Beta" class="w-60 md:w-80 lg:w-96 hover:scale-105 transition-transform duration-200" />
+      </a>
+    </div>
+  <!-- Miniatura de Video -->
+  <div class="flex justify-center mt-6">
+    <video
+      id="previewVideo"
+      src="/early-trailer.webm"
+      autoplay
+      muted
+      loop
+      class="w-60 md:w-80 lg:w-96 rounded-xl transition-transform duration-300 hover:scale-110 shadow-xl cursor-pointer"
+    ></video>
+  </div>
+
+  <!-- Modal de video expandido -->
+  <div
+    id="videoModal"
+    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
+  >
+    <div class="relative w-[90%] md:w-[70%] lg:w-[60%]">
+      <button
+        id="closeModal"
+        class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500"
+        aria-label="Cerrar video"
+      >
+        &times;
+      </button>
+      <video
+        id="modalVideo"
+        src="/early-trailer.webm"
+        controls
+        class="w-full rounded-lg shadow-2xl"
+      ></video>
+    </div>
+  </div>
   </div>
 
   <!-- PERSONAJES HERO -->
@@ -86,3 +119,32 @@ import LogoGame from "../assets/images/logo-how.webp";
     </div>
   </div>
 </section>
+
+<script is:inline>
+  const previewVideo = document.getElementById('previewVideo');
+  const videoModal = document.getElementById('videoModal');
+  const closeModal = document.getElementById('closeModal');
+  const modalVideo = document.getElementById('modalVideo');
+
+  previewVideo.addEventListener('click', () => {
+    videoModal.classList.remove('hidden');
+    modalVideo.currentTime = 0;
+    modalVideo.muted = false;
+    modalVideo.play();
+  });
+
+  closeModal.addEventListener('click', () => {
+    videoModal.classList.add('hidden');
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+  });
+
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      videoModal.classList.add('hidden');
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+    }
+  });
+</script>
+
