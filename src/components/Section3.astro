@@ -10,7 +10,7 @@ import Gameplay4 from "../assets/images/gameplay4.png";
 ---
 
 <section
-  class="sticky top-0 h-screen z-40 bg-[url('/purple-background.png')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center lg:justify-start px-6 text-white overflow-hidden pt-44 pb-20 fade-in-on-scroll"
+  class="relative top-0 h-screen z-40 bg-[url('/purple-background.png')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center lg:justify-start px-6 text-white overflow-hidden pt-44 pb-20"
 >
   <Pattern />
 
@@ -84,25 +84,6 @@ import Gameplay4 from "../assets/images/gameplay4.png";
 </section>
 
 <script is:inline>
-  if (typeof window !== "undefined") {
-    const fadeObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-          } else {
-            entry.target.classList.remove("fade-in");
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-
-    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
-      fadeObserver.observe(el);
-    });
-  }
-
   const images = document.querySelectorAll(".fade-image");
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
@@ -149,14 +130,3 @@ import Gameplay4 from "../assets/images/gameplay4.png";
   showImage(current);
   startAuto();
 </script>
-
-<style>
-  .fade-in-on-scroll {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
-  .fade-in-on-scroll.fade-in {
-    opacity: 1;
-  }
-</style>
