@@ -12,60 +12,105 @@ import Wardians from "../assets/images/wardians.webp";
 ---
 
 <section
-      class="sticky top-0 h-screen z-30 bg-[url('/purple-background.png')] bg-cover bg-center bg-fixed flex items-center justify-center px-6 text-white overflow-hidden fade-in-on-scroll"
-    >
-      <Pattern />
-      <div
-        class="absolute top-10 left-10 animate-float-slow z-10 w-24 md:w-32 lg:w-40"
-      >
-        <Image src={Jugabilidad} alt="Icono Jugabilidad" />
-      </div>
-      <div
-        class="absolute top-10 inset-x-0 mx-auto animate-float-fast z-10 w-24 md:w-32 lg:w-40"
-      >
-        <Image src={Modos} alt="Icono Modos" />
-      </div>
-      <div
-        class="absolute top-10 right-10 animate-float-slow z-10 w-24 md:w-32 lg:w-40"
-      >
-        <Image src={Multijugador} alt="Icono Multijugador" />
-      </div>
-      <div
-        class="absolute bottom-10 left-10 animate-float-fast z-10 w-24 md:w-32 lg:w-40"
-      >
-        <Image src={Personaliza} alt="Icono Personaliza" />
-      </div>
-      <div
-        class="absolute bottom-10 inset-x-0 mx-auto animate-float-slow z-10 w-24 md:w-32 lg:w-40"
-      >
-        <Image src={Progresa} alt="Icono Progresa" />
-      </div>
-      <div
-        class="absolute bottom-10 right-10 animate-float-fast z-10 w-24 md:w-32 lg:w-40"
-      >
-        <Image src={Wardians} alt="Icono Wardians" />
-      </div>
+  class="relative min-h-screen z-30 bg-[url('/purple-background.png')] bg-cover bg-center bg-fixed flex flex-col items-center justify-start px-6 text-white overflow-hidden pt-20 pb-20 fade-in-on-scroll"
+>
+  <Pattern />
 
-      <div class="relative z-20 text-center">
-        <h2
-          class="font-lilita text-white text-5xl md:text-7xl lg:text-[160px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
-        >
-          Explora tus logros
-        </h2>
-        <h2
-          class="font-lilita text-white text-5xl md:text-7xl lg:text-[160px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
-        >
-          y recompensas
-        </h2>
-        <p
-          class="font-lilita mt-6 text-lg md:text-xl text-white/90 max-w-xl mx-auto"
-        >
-          Diseñado para ofrecer una experiencia accesible pero profunda, HoW
-          combina elementos de RPG, coleccionismo y personalización con una
-          estructura multijugador asíncrona ideal para sesiones móviles.
-        </p>
+  <!-- TÍTULO -->
+  <div class="text-center mb-12 z-20 px-4">
+    <h2
+      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
+    >
+      Explora tus logros
+    </h2>
+    <h2
+      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
+    >
+      y recompensas
+    </h2>
+    <p
+      class="font-lilita mt-4 text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
+    >
+      Diseñado para ofrecer una experiencia accesible pero profunda, HoW combina
+      elementos de RPG, coleccionismo y personalización con una estructura
+      multijugador asíncrona ideal para sesiones móviles.
+    </p>
+  </div>
+
+  <!-- ICONOS EN FILAS -->
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 z-20 px-4"
+  >
+    <!-- Repetido para cada ícono -->
+    <div class="flex flex-col items-center text-center">
+      <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
+        <Image src={Jugabilidad} alt="Jugabilidad" />
       </div>
-    </section>
+      <h3 class="text-lg md:text-xl font-bold mb-1">Jugabilidad táctica</h3>
+      <p class="text-sm md:text-base max-w-xs text-white/80">
+        Prepara a tu equipo con combinaciones inteligentes. Las batallas son
+        automáticas, pero la estrategia marca la diferencia.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
+        <Image src={Wardians} alt="Wardians" />
+      </div>
+      <h3 class="text-lg md:text-xl font-bold mb-1">Domina a tus Wardians</h3>
+      <p class="text-sm md:text-base max-w-xs text-white/80">
+        Recluta, entrena y evoluciona criaturas únicas. Cada Wardian tiene
+        habilidades propias para crear builds a tu medida.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
+        <Image src={Personaliza} alt="Personalización" />
+      </div>
+      <h3 class="text-lg md:text-xl font-bold mb-1">Personaliza al máximo</h3>
+      <p class="text-sm md:text-base max-w-xs text-white/80">
+        Cambia el estilo y arsenal de tus Wardians. Explora combinaciones únicas
+        y saca ventaja con tu propio enfoque táctico.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
+        <Image src={Modos} alt="Modos de juego" />
+      </div>
+      <h3 class="text-lg md:text-xl font-bold mb-1">Modos de juego</h3>
+      <p class="text-sm md:text-base max-w-xs text-white/80">
+        Compite en la liga o reta a tus amigos. Juega rápido o a fondo, tú
+        decides cómo enfrentarte.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
+        <Image src={Multijugador} alt="Multijugador" />
+      </div>
+      <h3 class="text-lg md:text-xl font-bold mb-1">
+        Multijugador sin barreras
+      </h3>
+      <p class="text-sm md:text-base max-w-xs text-white/80">
+        Enfréntate a otros jugadores sin conexión simultánea. Combate a tu ritmo
+        y mantén el progreso siempre activo.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
+        <Image src={Progresa} alt="Progreso" />
+      </div>
+      <h3 class="text-lg md:text-xl font-bold mb-1">Progresión constante</h3>
+      <p class="text-sm md:text-base max-w-xs text-white/80">
+        Cada partida te hace más fuerte. Mejora personajes, consigue trofeos y
+        desbloquea recompensas en una evolución sin pausas.
+      </p>
+    </div>
+  </div>
+</section>
 
 <script>
   if (typeof window !== "undefined") {
@@ -88,10 +133,15 @@ import Wardians from "../assets/images/wardians.webp";
   }
 </script>
 
-    <style>
+<style>
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   .animate-float-slow {
@@ -102,10 +152,11 @@ import Wardians from "../assets/images/wardians.webp";
     animation: float 4s ease-in-out infinite;
   }
 
-    .fade-in-on-scroll {
+  .fade-in-on-scroll {
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
+
   .fade-in-on-scroll.fade-in {
     opacity: 1;
   }
