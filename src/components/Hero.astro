@@ -8,72 +8,78 @@ import Gorilla from "../assets/images/gorilla.webp";
 import Panda from "../assets/images/panda.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
-import Beta from "../assets/images/beta.webp"; 
+import Beta from "../assets/images/beta.webp";
 ---
 
 <section
-  class="sticky top-0 h-screen z-10 bg-[url('/background.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center px-6 text-white overflow-hidden"
+  class="sticky top-0 h-screen z-10 bg-[url('/background.jpg')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center px-6 text-white overflow-hidden"
 >
-  <!-- HEADER -->
-  <div class="absolute top-4 left-4 z-10">
-    <Image src={LogoStudio} alt="Nakama Game Studio" class="w-24 md:w-32" />
+  <!-- NAVBAR SUPERIOR -->
+  <div class="absolute top-4 left-4 z-20">
+    <Image src={LogoStudio} alt="Nakama Game Studio" class="w-28 md:w-36" />
   </div>
+
+  <div class="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+    <Image src={LogoGame} alt="House of Wardians" class="w-40 md:w-60" />
+  </div>
+
   <div class="absolute top-4 right-4 flex gap-4 z-20">
     <a
       href="https://www.instagram.com/nakamagamestudio/"
-      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
     >
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
     <a
       href="https://www.tiktok.com/@nakama_gamestudio"
-      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
     >
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
     <a
       href="https://www.youtube.com/@Nakamagamestudio"
-      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
     >
       <Icon name="youtube" class="w-full h-full text-white" />
     </a>
   </div>
 
-  <!-- LOGO -->
-  <div class="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
-    <Image src={LogoGame} alt="House of Wardians" class="w-60 md:w-80" />
-  </div>
-
-  <!-- TÍTULO -->
-  <div class="relative z-10 text-center">
+  <!-- TÍTULO PRINCIPAL -->
+  <div class="text-center mt-28">
     <h2
-      class="font-lilita font-extrabold text-white text-3xl md:text-5xl drop-shadow-[3px_3px_0_rgba(0,0,0,1)] -rotate-2"
+      class="font-lilita font-bold text-white text-xl md:text-3xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)]"
     >
       ¡LLEGAN LOS
     </h2>
     <h1
-      class="font-lilita font-extrabold text-white text-[64px] md:text-[120px] lg:text-[200px] leading-none tracking-tight drop-shadow-[8px_8px_0_rgba(0,0,0,1)] -rotate-2"
+      class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)]"
     >
       WARDIANS!
     </h1>
-    <div> 
-      <a href="#" class="flex justify-center mt-8">
-          <Image src={Beta} alt="Beta" class="w-60 md:w-80 lg:w-96 hover:scale-105 transition-transform duration-200" />
-      </a>
-    </div>
-  <!-- Miniatura de Video -->
-  <div class="flex justify-center mt-6">
+  </div>
+
+  <!-- VIDEO -->
+  <div class="mt-6 z-10">
     <video
       id="previewVideo"
       src="/early-trailer.webm"
       autoplay
       muted
       loop
-      class="w-60 md:w-80 lg:w-96 rounded-xl transition-transform duration-300 hover:scale-110 shadow-xl cursor-pointer"
+      class="w-78 md:w-[32rem] lg:w-[50rem] rounded-xl transition-transform duration-300 hover:scale-110 shadow-xl cursor-pointer drop-shadow-[6px_6px_0_rgba(0,0,0,1)]"
     ></video>
   </div>
 
-  <!-- Modal de video expandido -->
+  <!-- BOTÓN BETA -->
+  <div class="flex justify-center mt-4 z-10">
+    <Image
+      src={Beta}
+      alt="Beta"
+      class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
+    />
+  </div>
+
+  <!-- MODAL VIDEO EXPANDIDO -->
   <div
     id="videoModal"
     class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
@@ -90,15 +96,13 @@ import Beta from "../assets/images/beta.webp";
         id="modalVideo"
         src="/early-trailer.webm"
         controls
-        class="w-full rounded-lg shadow-2xl"
-      ></video>
+        class="w-full rounded-lg shadow-2xl"></video>
     </div>
-  </div>
   </div>
 
   <!-- PERSONAJES HERO -->
   <div
-    class="absolute bottom-0 left-0 w-44 md:w-96 lg:w-[32rem] z-10 transform -scale-x-100"
+    class="absolute bottom-0 left-0 w-44 md:w-80 lg:w-[32rem] z-10 transform -scale-x-100"
   >
     <div class="relative">
       <Image src={Panda} alt="Panda" />
@@ -109,7 +113,7 @@ import Beta from "../assets/images/beta.webp";
     </div>
   </div>
 
-  <div class="absolute bottom-0 right-0 w-44 md:w-96 lg:w-[32rem] z-10">
+  <div class="absolute bottom-0 right-0 w-44 md:w-80 lg:w-[32rem] z-10">
     <div class="relative">
       <Image src={Gorilla} alt="Gorilla" />
       <div
@@ -121,30 +125,29 @@ import Beta from "../assets/images/beta.webp";
 </section>
 
 <script is:inline>
-  const previewVideo = document.getElementById('previewVideo');
-  const videoModal = document.getElementById('videoModal');
-  const closeModal = document.getElementById('closeModal');
-  const modalVideo = document.getElementById('modalVideo');
+  const previewVideo = document.getElementById("previewVideo");
+  const videoModal = document.getElementById("videoModal");
+  const closeModal = document.getElementById("closeModal");
+  const modalVideo = document.getElementById("modalVideo");
 
-  previewVideo.addEventListener('click', () => {
-    videoModal.classList.remove('hidden');
+  previewVideo.addEventListener("click", () => {
+    videoModal.classList.remove("hidden");
     modalVideo.currentTime = 0;
     modalVideo.muted = false;
     modalVideo.play();
   });
 
-  closeModal.addEventListener('click', () => {
-    videoModal.classList.add('hidden');
+  closeModal.addEventListener("click", () => {
+    videoModal.classList.add("hidden");
     modalVideo.pause();
     modalVideo.currentTime = 0;
   });
 
-  videoModal.addEventListener('click', (e) => {
+  videoModal.addEventListener("click", (e) => {
     if (e.target === videoModal) {
-      videoModal.classList.add('hidden');
+      videoModal.classList.add("hidden");
       modalVideo.pause();
       modalVideo.currentTime = 0;
     }
   });
 </script>
-
