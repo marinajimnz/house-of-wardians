@@ -15,7 +15,7 @@ import Gameplay4 from "../assets/images/gameplay4.png";
   <Pattern />
 
   <!-- Título centrado -->
-  <div class="text-center mb-12 z-20 w-full">
+  <div class="text-center mb-12 z-30 w-full">
     <h2
       class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
     >
@@ -84,6 +84,25 @@ import Gameplay4 from "../assets/images/gameplay4.png";
 </section>
 
 <script is:inline>
+  if (typeof window !== "undefined") {
+    const fadeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          } else {
+            entry.target.classList.remove("fade-in");
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+      fadeObserver.observe(el);
+    });
+  }
+
   const images = document.querySelectorAll(".fade-image");
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
@@ -141,24 +160,3 @@ import Gameplay4 from "../assets/images/gameplay4.png";
     opacity: 1;
   }
 </style>
-
-<script is:inline>
-  if (typeof window !== "undefined") {
-    const fadeObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-          } else {
-            entry.target.classList.remove("fade-in");
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-
-    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
-      fadeObserver.observe(el);
-    });
-  }
-</script>
