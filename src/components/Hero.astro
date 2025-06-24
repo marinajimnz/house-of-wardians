@@ -9,6 +9,7 @@ import Panda from "../assets/images/panda.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
 import Beta from "../assets/images/beta.webp";
+import Discord from "../assets/images/discord.webp";
 ---
 
 <section
@@ -70,11 +71,18 @@ import Beta from "../assets/images/beta.webp";
     ></video>
   </div>
 
-  <!-- BOTÓN BETA -->
-  <div class="flex justify-center mt-4 z-10">
+  <!-- BOTONES BETA Y DISCORD -->
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4"
+  >
     <Image
       src={Beta}
       alt="Beta"
+      class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
+    />
+    <Image
+      src={Discord}
+      alt="Discord"
       class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
     />
   </div>
