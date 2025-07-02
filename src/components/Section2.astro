@@ -17,7 +17,7 @@ import Wardians from "../assets/images/wardians.webp";
   <Pattern />
 
   <!-- TÍTULO -->
-  <div class="text-center mb-12 z-20 px-4">
+  <div class="text-center lg:mt-40 mb-12 z-20 px-4">
     <h2
       class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
     >
@@ -37,37 +37,36 @@ import Wardians from "../assets/images/wardians.webp";
     </p>
   </div>
 
-  <!-- ICONOS EN FILAS -->
+<!-- ICONOS EN FILAS -->
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 z-20 px-4"
+    class="grid grid-cols-2 grid-rows-3 gap-y-12 gap-x-8 z-20 px-4 sm:grid-cols-2 sm:grid-rows-auto lg:grid-cols-3"
   >
-    <!-- Repetido para cada ícono -->
     <div class="flex flex-col items-center text-center">
       <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Jugabilidad} alt="Jugabilidad" />
       </div>
       <h3 class="text-lg md:text-xl font-bold mb-1">Jugabilidad táctica</h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80">
+      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
         Prepara a tu equipo con combinaciones inteligentes. Las batallas son automáticas, pero la estrategia marca la diferencia.
       </p>
     </div>
 
-        <div class="flex flex-col items-center text-center">
+    <div class="flex flex-col items-center text-center">
       <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Wardians} alt="Wardians" />
       </div>
       <h3 class="text-lg md:text-xl font-bold mb-1">Domina a tus Wardians</h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80">
+      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
         Recluta, entrena y evoluciona criaturas únicas. Cada Wardian tiene habilidades propias para crear builds a tu medida.
       </p>
     </div>
 
-        <div class="flex flex-col items-center text-center">
+    <div class="flex flex-col items-center text-center">
       <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Personaliza} alt="Personalización" />
       </div>
       <h3 class="text-lg md:text-xl font-bold mb-1">Personaliza al máximo</h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80">
+      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
         Cambia el estilo y arsenal de tus Wardians. Explora combinaciones únicas y saca ventaja con tu propio enfoque táctico.
       </p>
     </div>
@@ -77,7 +76,7 @@ import Wardians from "../assets/images/wardians.webp";
         <Image src={Modos} alt="Modos de juego" />
       </div>
       <h3 class="text-lg md:text-xl font-bold mb-1">Modos de juego</h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80">
+      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
         Compite en la liga o reta a tus amigos. Juega rápido o a fondo, tú decides cómo enfrentarte.
       </p>
     </div>
@@ -87,7 +86,7 @@ import Wardians from "../assets/images/wardians.webp";
         <Image src={Multijugador} alt="Multijugador" />
       </div>
       <h3 class="text-lg md:text-xl font-bold mb-1">Multijugador sin barreras</h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80">
+      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
         Enfréntate a otros jugadores sin conexión simultánea. Combate a tu ritmo y mantén el progreso siempre activo.
       </p>
     </div>
@@ -97,7 +96,7 @@ import Wardians from "../assets/images/wardians.webp";
         <Image src={Progresa} alt="Progreso" />
       </div>
       <h3 class="text-lg md:text-xl font-bold mb-1">Progresión constante</h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80">
+      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
         Cada partida te hace más fuerte. Mejora personajes, consigue trofeos y desbloquea recompensas en una evolución sin pausas.
       </p>
     </div>
