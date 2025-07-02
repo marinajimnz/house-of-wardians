@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-import Beta from "../assets/images/beta.webp";  
+import Beta from "../assets/images/beta.webp";
 import Discord from "../assets/images/discord.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 ---
@@ -12,11 +12,27 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
   <div class="border-b border-gray-800 py-4">
     <div class="max-w-7xl mx-auto px-4 flex justify-center">
       <div class="flex gap-3">
-        <a href="#" class="block">
-          <Image src={Beta} alt="Beta" class="w-40 md:w-60 hover:scale-105 transition-transform duration-200" />
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScD-Epuxj6r3bof_G1Fhlcv2H0L-iASaW4Msxbic5tgoQ7Meg/viewform?usp=send_form"
+          target="_blank"
+          class="block"
+        >
+          <Image
+            src={Beta}
+            alt="Beta"
+            class="w-40 md:w-60 hover:scale-105 transition-transform duration-200"
+          />
         </a>
-        <a href="#" class="block">
-          <Image src={Discord} alt="Discord" class="w-40 md:w-52 hover:scale-105 transition-transform duration-200" />
+        <a
+          href="https://discord.com/invite/zrYVRFbx4u"
+          target="_blank"
+          class="block"
+        >
+          <Image
+            src={Discord}
+            alt="Discord"
+            class="w-40 md:w-52 hover:scale-105 transition-transform duration-200"
+          />
         </a>
       </div>
     </div>
@@ -24,20 +40,27 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
 
   <!-- Bottom section: Logo (left), Policies (center), RRSS (right) -->
   <div class="py-6">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6">
-      
+    <div
+      class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6"
+    >
       <!-- Logo left -->
       <div class="flex justify-center lg:justify-start w-full lg:w-auto">
         <Image src={LogoStudio} alt="Nakama Game Studio" class="w-24 md:w-32" />
       </div>
-      
+
       <!-- Centered policy links -->
-      <nav class="flex justify-center w-full lg:w-auto gap-6 text-sm text-gray-400">
-        <a href="#" class="hover:text-white transition-colors">Aviso Legal y Política de Privacidad</a>
+      <nav
+        class="flex justify-center w-full lg:w-auto gap-6 text-sm text-gray-400"
+      >
+        <a href="#" class="hover:text-white transition-colors"
+          >Aviso Legal y Política de Privacidad</a
+        >
       </nav>
-      
+
       <!-- RRSS right -->
-      <div class="flex justify-center lg:justify-end w-full lg:w-auto items-center gap-4">
+      <div
+        class="flex justify-center lg:justify-end w-full lg:w-auto items-center gap-4"
+      >
         <a
           href="https://www.instagram.com/nakamagamestudio/"
           class="w-6 md:w-8 hover:scale-110 transition-transform duration-200"
@@ -57,7 +80,6 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
           <Icon name="youtube" class="w-full h-full text-white" />
         </a>
       </div>
-
     </div>
   </div>
 </footer>
