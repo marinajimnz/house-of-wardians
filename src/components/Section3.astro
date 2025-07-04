@@ -3,14 +3,26 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Pattern from "./Pattern.astro";
 
-import Gameplay1 from "../assets/images/gameplay1.png";
-import Gameplay2 from "../assets/images/gameplay2.png";
-import Gameplay3 from "../assets/images/gameplay3.png";
-import Gameplay4 from "../assets/images/gameplay4.png";
-//import Gecko from "../assets/images/gecko.gif";
-//import Bull from "../assets/images/bull.gif";
+import Gameplay1 from "../assets/images/gameplay1.webp";
+import Gameplay2 from "../assets/images/gameplay2.webp";
+import Gameplay3 from "../assets/images/gameplay3.webp";
+import Gameplay4 from "../assets/images/gameplay4.webp";
+import Gameplay5 from "../assets/images/gameplay5.webp";
+import Gameplay6 from "../assets/images/gameplay6.webp";
+import Gameplay7 from "../assets/images/gameplay7.webp";
+
 import Tengu from "../assets/images/tengu.webp";
 import Golem from "../assets/images/golem.webp";
+
+const gameplays = [
+  { src: Gameplay1, alt: "Gameplay 1" },
+  { src: Gameplay2, alt: "Gameplay 2" },
+  { src: Gameplay3, alt: "Gameplay 3" },
+  { src: Gameplay4, alt: "Gameplay 4" },
+  { src: Gameplay5, alt: "Gameplay 5" },
+  { src: Gameplay6, alt: "Gameplay 6" },
+  { src: Gameplay7, alt: "Gameplay 7" },
+];
 ---
 
 <section
@@ -33,45 +45,24 @@ import Golem from "../assets/images/golem.webp";
       id="carousel"
       class="relative overflow-hidden rounded-xl shadow-2xl w-[90vw] sm:w-[80vw] md:w-[60vw] lg:w-[50vw] aspect-video"
     >
-      <div
-        class="fade-image absolute inset-0 opacity-100 transition-opacity duration-1000"
-      >
-        <Image
-          src={Gameplay1}
-          alt="Gameplay 1"
-          class="w-full h-full object-cover rounded-xl"
-        />
-      </div>
-      <div
-        class="fade-image absolute inset-0 opacity-0 transition-opacity duration-1000"
-      >
-        <Image
-          src={Gameplay2}
-          alt="Gameplay 2"
-          class="w-full h-full object-cover rounded-xl"
-        />
-      </div>
-      <div
-        class="fade-image absolute inset-0 opacity-0 transition-opacity duration-1000"
-      >
-        <Image
-          src={Gameplay3}
-          alt="Gameplay 3"
-          class="w-full h-full object-cover rounded-xl"
-        />
-      </div>
-      <div
-        class="fade-image absolute inset-0 opacity-0 transition-opacity duration-1000"
-      >
-        <Image
-          src={Gameplay4}
-          alt="Gameplay 4"
-          class="w-full h-full object-cover rounded-xl"
-        />
-      </div>
+      {
+        gameplays.map((img, index) => (
+          <div
+            class={`fade-image absolute inset-0 transition-opacity duration-1000 ${
+              index === 0 ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              class="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+        ))
+      }
     </div>
 
-    <!-- BOTÓN BETA Y DISCORD -->
+    <!-- BOTONES FLECHAS  -->
     <div class="flex justify-center gap-4 mt-6">
       <Icon
         id="prev"
