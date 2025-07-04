@@ -7,7 +7,7 @@ import Gorilla from "../assets/images/gorilla.webp";
 import Panda from "../assets/images/panda.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
-import Beta from "../assets/images/beta.webp";
+import Early from "../assets/images/early.webp";
 import Discord from "../assets/images/discord.webp";
 ---
 
@@ -16,11 +16,21 @@ import Discord from "../assets/images/discord.webp";
 >
   <!-- NAVBAR -->
   <div class="absolute top-4 left-4 z-20">
-    <Image src={LogoStudio} alt="Logo de Nakama Game Studio" class="w-28 md:w-36" />
+    <a href="https://vidibondgames.com/">
+      <Image
+        src={LogoStudio}
+        alt="Logo de Nakama Game Studio"
+        class="w-28 md:w-36"
+      />
+    </a>
   </div>
 
   <div class="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-    <Image src={LogoGame} alt="Logo de House of Wardians" class="w-40 md:w-60" />
+    <Image
+      src={LogoGame}
+      alt="Logo de House of Wardians"
+      class="w-40 md:w-60"
+    />
   </div>
 
   <!-- RRSS -->
@@ -80,8 +90,8 @@ import Discord from "../assets/images/discord.webp";
       target="_blank"
     >
       <Image
-        src={Beta}
-        alt="Botón de acceso a la beta del juego"
+        src={Early}
+        alt="Botón de acceso al early access del juego en android"
         class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
       />
     </a>
@@ -134,7 +144,10 @@ import Discord from "../assets/images/discord.webp";
 
   <div class="absolute bottom-7 right-0 w-44 md:w-80 lg:w-[32rem] z-10">
     <div class="relative">
-      <Image src={Gorilla} alt="Personaje del juego House of Wardians: Gorilla" />
+      <Image
+        src={Gorilla}
+        alt="Personaje del juego House of Wardians: Gorilla"
+      />
       <div
         class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full blur-md z-0"
       >

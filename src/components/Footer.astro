@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-import Beta from "../assets/images/beta.webp";
+import Early from "../assets/images/early.webp";
 import Discord from "../assets/images/discord.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 ---
@@ -18,9 +18,9 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
           class="block"
         >
           <Image
-            src={Beta}
-            alt="Botón de acceso a la beta del juego"
-            class="w-40 md:w-60 hover:scale-105 transition-transform duration-200"
+            src={Early}
+            alt="Botón de acceso al early access del juego en android"
+            class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
           />
         </a>
         <a
@@ -31,7 +31,7 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
           <Image
             src={Discord}
             alt="Botón de Discord que te lleva al servidor de House of Wardians"
-            class="w-40 md:w-52 hover:scale-105 transition-transform duration-200"
+            class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
           />
         </a>
       </div>
@@ -45,7 +45,13 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
     >
       <!-- Logo -->
       <div class="flex justify-center lg:justify-start w-full lg:w-auto">
-        <Image src={LogoStudio} alt="Nakama Game Studio" class="w-24 md:w-32" />
+        <a href="https://vidibondgames.com/">
+          <Image
+            src={LogoStudio}
+            alt="Nakama Game Studio"
+            class="w-24 md:w-32"
+          />
+        </a>
       </div>
 
       <!-- Política de privacidad -->
