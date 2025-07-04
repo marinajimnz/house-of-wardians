@@ -2,8 +2,8 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-import Early from "../assets/images/early.webp";
-import Discord from "../assets/images/discord.webp";
+import Android from "../assets/images/early-android.webp";
+import IOs from "../assets/images/early-ios.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 ---
 
@@ -18,7 +18,7 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
           class="block"
         >
           <Image
-            src={Early}
+            src={Android}
             alt="Botón de acceso al early access del juego en android"
             class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
           />
@@ -29,8 +29,8 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
           class="block"
         >
           <Image
-            src={Discord}
-            alt="Botón de Discord que te lleva al servidor de House of Wardians"
+            src={IOs}
+            alt="Botón de acceso al early access del juego en iOS"
             class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
           />
         </a>
@@ -71,18 +71,21 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
       >
         <a
           href="https://www.instagram.com/nakamagamestudio/"
+          target="_blank"
           class="w-6 md:w-8 hover:scale-110 transition-transform duration-200"
         >
           <Icon name="instagram" class="w-full h-full text-white" />
         </a>
         <a
           href="https://www.tiktok.com/@nakama_gamestudio"
+          target="_blank"
           class="w-6 md:w-8 hover:scale-110 transition-transform duration-200"
         >
           <Icon name="tiktok" class="w-full h-full text-white" />
         </a>
         <a
           href="https://www.youtube.com/@Nakamagamestudio"
+          target="_blank"
           class="w-6 md:w-8 hover:scale-110 transition-transform duration-200"
         >
           <Icon name="youtube" class="w-full h-full text-white" />

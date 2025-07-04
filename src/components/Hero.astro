@@ -3,16 +3,16 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import "../styles/global.css";
 
-import Gorilla from "../assets/images/gorilla.webp";
-import Panda from "../assets/images/panda.webp";
+//import Gorilla from "../assets/images/gorilla.webp";
+//import Panda from "../assets/images/panda.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
-import Early from "../assets/images/early.webp";
-import Discord from "../assets/images/discord.webp";
+import Android from "../assets/images/early-android.webp";
+import IOs from "../assets/images/early-ios.webp";
 ---
 
 <section
-  class="sticky top-0 h-screen z-10 bg-[url('/background.webp')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center px-6 text-white overflow-hidden"
+  class="sticky top-0 h-screen z-10 bg-[url('/hero-background.webp')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center px-6 text-white overflow-hidden"
 >
   <!-- NAVBAR -->
   <div class="absolute top-4 left-4 z-20">
@@ -37,18 +37,21 @@ import Discord from "../assets/images/discord.webp";
   <div class="absolute top-4 right-4 flex gap-4 z-20">
     <a
       href="https://www.instagram.com/nakamagamestudio/"
+      target="_blank"
       class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
     >
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
     <a
       href="https://www.tiktok.com/@nakama_gamestudio"
+      target="_blank"
       class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
     >
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
     <a
       href="https://www.youtube.com/@Nakamagamestudio"
+      target="_blank"
       class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
     >
       <Icon name="youtube" class="w-full h-full text-white" />
@@ -90,7 +93,7 @@ import Discord from "../assets/images/discord.webp";
       target="_blank"
     >
       <Image
-        src={Early}
+        src={Android}
         alt="Botón de acceso al early access del juego en android"
         class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
       />
@@ -101,8 +104,8 @@ import Discord from "../assets/images/discord.webp";
       class="block"
     >
       <Image
-        src={Discord}
-        alt="Botón de Discord que te lleva al servidor de House of Wardians"
+        src={IOs}
+        alt="Botón de acceso al early access del juego en iOS"
         class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
       />
     </a>
@@ -130,7 +133,7 @@ import Discord from "../assets/images/discord.webp";
   </div>
 
   <!-- PERSONAJES -->
-  <div
+  <!-- <div
     class="absolute bottom-0 left-0 w-44 md:w-80 lg:w-[32rem] z-10 transform -scale-x-100"
   >
     <div class="relative">
@@ -153,7 +156,7 @@ import Discord from "../assets/images/discord.webp";
       >
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <script is:inline>
