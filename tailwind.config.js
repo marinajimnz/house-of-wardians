@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        anton: ['"Anton"', 'sans-serif'],
+        lilita: ['"Lilita One"', 'cursive'],
       },
     },
   },

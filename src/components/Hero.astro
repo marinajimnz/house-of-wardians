@@ -1,0 +1,188 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import "../styles/global.css";
+
+//import Gorilla from "../assets/images/gorilla.webp";
+//import Panda from "../assets/images/panda.webp";
+import LogoStudio from "../assets/images/logo-nakama.webp";
+import LogoGame from "../assets/images/logo-how.webp";
+import Android from "../assets/images/early-android.webp";
+import IOs from "../assets/images/early-ios.webp";
+---
+
+<section
+  class="sticky top-0 h-screen z-10 bg-[url('/hero-background.webp')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center px-6 text-white overflow-hidden"
+>
+  <!-- NAVBAR -->
+  <div class="absolute top-4 left-4 z-20">
+    <a href="https://vidibondgames.com/" target="_blank">
+      <Image
+        src={LogoStudio}
+        alt="Logo de Nakama Game Studio"
+        class="w-28 md:w-36"
+      />
+    </a>
+  </div>
+
+  <div class="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+    <Image
+      src={LogoGame}
+      alt="Logo de House of Wardians"
+      class="w-40 md:w-60"
+    />
+  </div>
+
+  <!-- RRSS -->
+  <div class="absolute top-4 right-4 flex gap-4 z-20">
+    <a
+      href="https://www.instagram.com/nakamagamestudio/"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
+      <Icon name="instagram" class="w-full h-full text-white" />
+    </a>
+    <a
+      href="https://www.tiktok.com/@nakama_gamestudio"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
+      <Icon name="tiktok" class="w-full h-full text-white" />
+    </a>
+    <a
+      href="https://www.youtube.com/@Nakamagamestudio"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
+      <Icon name="youtube" class="w-full h-full text-white" />
+    </a>
+  </div>
+
+  <!-- TÍTULO -->
+  <div class="text-center">
+    <h2
+      class="font-lilita font-bold text-white text-xl md:text-3xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] -rotate-2"
+    >
+      ¡LLEGAN LOS
+    </h2>
+    <h1
+      class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 mt-2 md:mt-4 lg:mt-6"
+    >
+      WARDIANS!
+    </h1>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="mt-6 z-10">
+    <video
+      id="previewVideo"
+      src="/early-trailer.webm"
+      autoplay
+      muted
+      loop
+      class="w-78 md:w-[32rem] lg:w-[50rem] rounded-xl transition-transform duration-300 hover:scale-110 shadow-xl cursor-pointer drop-shadow-[6px_6px_0_rgba(0,0,0,1)]"
+    ></video>
+  </div>
+
+  <!-- BOTONES BETA Y DISCORD -->
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4"
+  >
+    <a
+      href="https://play.google.com/store/apps/details?id=com.nakamagamestudio.elgolpeador"
+      target="_blank"
+    >
+      <Image
+        src={Android}
+        alt="Botón de acceso al early access del juego en android"
+        class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
+      />
+    </a>
+    <a
+      href="https://testflight.apple.com/join/144rz1z5"
+      target="_blank"
+      class="block"
+    >
+      <Image
+        src={IOs}
+        alt="Botón de acceso al early access del juego en iOS"
+        class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
+      />
+    </a>
+  </div>
+
+  <!-- MODAL VIDEO EXPANDIDO -->
+  <div
+    id="videoModal"
+    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
+  >
+    <div class="relative w-[90%] md:w-[70%] lg:w-[60%]">
+      <button
+        id="closeModal"
+        class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500"
+        aria-label="Cerrar video"
+      >
+        &times;
+      </button>
+      <video
+        id="modalVideo"
+        src="/early-trailer.webm"
+        controls
+        class="w-full rounded-lg shadow-2xl"></video>
+    </div>
+  </div>
+
+  <!-- PERSONAJES -->
+  <!-- <div
+    class="absolute bottom-0 left-0 w-44 md:w-80 lg:w-[32rem] z-10 transform -scale-x-100"
+  >
+    <div class="relative">
+      <Image src={Panda} alt="Personaje del juego House of Wardians: Panda" />
+      <div
+        class="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full blur-md z-0"
+      >
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-7 right-0 w-44 md:w-80 lg:w-[32rem] z-10">
+    <div class="relative">
+      <Image
+        src={Gorilla}
+        alt="Personaje del juego House of Wardians: Gorilla"
+      />
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full blur-md z-0"
+      >
+      </div>
+    </div>
+  </div> -->
+</section>
+
+<script is:inline>
+  const previewVideo = document.getElementById("previewVideo");
+  const videoModal = document.getElementById("videoModal");
+  const closeModal = document.getElementById("closeModal");
+  const modalVideo = document.getElementById("modalVideo");
+
+  previewVideo.addEventListener("click", () => {
+    videoModal.classList.remove("hidden");
+    modalVideo.currentTime = 0;
+    modalVideo.muted = false;
+    modalVideo.play();
+  });
+
+  closeModal.addEventListener("click", () => {
+    videoModal.classList.add("hidden");
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+  });
+
+  videoModal.addEventListener("click", (e) => {
+    if (e.target === videoModal) {
+      videoModal.classList.add("hidden");
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+    }
+  });
+</script>
