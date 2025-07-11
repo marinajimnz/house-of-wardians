@@ -6,7 +6,7 @@ import "../styles/global.css";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
 
-const { content, androidButton, iosButton, lang = "es" } = Astro.props;
+const { content, androidButton, iosButton, lang} = Astro.props;
 
 const imageMap = {
   "early-android-es.webp": await import(
