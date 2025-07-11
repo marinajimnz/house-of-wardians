@@ -54,7 +54,7 @@
     "questions": [
       {
         "question": "¿QUÉ ES HOUSE OF WARDIANS?",
-        "answer": "House of Wardians es un proyecto nacido de la idea de rescatar el concepto del mítico juego de navegador 'El Bruto'..."
+        "answer": "House of Wardians es un proyecto nacido de la idea de rescatar el concepto del mítico juego de navegador 'El Bruto' y adaptarlo a las mecánicas de juego actuales, añadiendo profundidad y elementos que aumentan el impacto de las decisiones del jugador y elevan la emoción en todos los aspectos del juego. Con un sistema de juego más pulido, nuevas funciones y modos, y un estilo visual inspirado directamente en la animación tipo cartoon, queremos traer de vuelta la experiencia que triunfó hace más de una década, adaptada al público actual, con el objetivo de entretener y emocionar a todos los jugadores."
       },
       {
         "question": "¿EN QUÉ PLATAFORMAS ESTARÁ DISPONIBLE?",
@@ -62,19 +62,19 @@
       },
       {
         "question": "¿SE VA A AÑADIR MÁS CONTENIDO?",
-        "answer": "¡Por supuesto! Esta es solo una primera versión..."
+        "answer": "¡Por supuesto! Esta es solo una primera versión. Tenemos previsto añadir nuevos wardians, armas, habilidades, espíritus y modos de juego de forma progresiva."
       },
       {
         "question": "¿EL JUEGO SERÁ GRATUITO?",
-        "answer": "Sí, descargar y jugar a House of Wardians será completamente gratuito..."
+        "answer": "Sí, descargar y jugar a House of Wardians será completamente gratuito. El juego incluirá algunas compras opcionales dentro de la aplicación, principalmente relacionadas con elementos estéticos y ciertos contenidos jugables. Sin embargo, el progreso estará cuidadosamente equilibrado para que todas las funcionalidades principales sean accesibles sin necesidad de realizar pagos. Nuestro compromiso es ofrecer una experiencia justa y disfrutable para todos los jugadores, evitando cualquier enfoque de monetización agresiva o que otorgue ventajas competitivas por realizar compras."
       },
       {
         "question": "¿CÓMO PUEDO GANAR MÁS COMBATES?",
-        "answer": "Pese a que el combate sea automático, el jugador posee gran impacto sobre el desarrollo de las batallas..."
+        "answer": "Pese a que el combate sea automático, el jugador posee gran impacto sobre el desarrollo de las batallas. Una elección adecuada de las armas asegurará aprovechar al máximo las estadísticas de tu wardian para maximizar sus fortalezas en combate. Del mismo modo, la elección de un espíritu que haga buena sinergia con los stats del wardian son una ventaja importante. Así pues, aprender bien cuáles son los puntos fuertes de un wardian te permitirá equiparlo con aquello que mejor le convenga."
       },
       {
         "question": "¿CONSERVARÉ MIS WARDIANS CUANDO SE LANCE LA VERSIÓN 1.0?",
-        "answer": "Lamentablemente, no. Durante el período de alpha y beta, el juego estará sujeto a múltiples cambios..."
+        "answer": "Lamentablemente, no. Durante el período de alpha y beta, el juego estará sujeto a múltiples cambios, por lo que los datos de esa etapa no se conservarán para el lanzamiento oficial."
       }
     ]
   },

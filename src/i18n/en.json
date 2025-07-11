@@ -52,31 +52,31 @@
   "faqs": {
     "title": "Frequently Asked Questions",
     "questions": [
-      {
-        "question": "WHAT IS HOUSE OF WARDIANS?",
-        "answer": "House of Wardians is a project inspired by the old browser game 'El Bruto'..."
-      },
-      {
-        "question": "WHAT PLATFORMS WILL IT BE AVAILABLE ON?",
-        "answer": "The game is designed exclusively for mobile devices, both Android and iOS."
-      },
-      {
-        "question": "WILL MORE CONTENT BE ADDED?",
-        "answer": "Absolutely! This is just a first version..."
-      },
-      {
-        "question": "WILL THE GAME BE FREE?",
-        "answer": "Yes, downloading and playing House of Wardians will be completely free..."
-      },
-      {
-        "question": "HOW CAN I WIN MORE FIGHTS?",
-        "answer": "Although combat is automatic, the player has a big impact through strategy and preparation..."
-      },
-      {
-        "question": "WILL I KEEP MY WARDIANS WHEN VERSION 1.0 LAUNCHES?",
-        "answer": "Unfortunately, no. During the alpha and beta phases, major changes are expected..."
-      }
-    ]
+    {
+      "question": "WHAT IS HOUSE OF WARDIANS?",
+      "answer": "House of Wardians is a project born from the idea of reviving the concept of the legendary browser game 'El Bruto' and adapting it to modern gameplay mechanics, adding depth and elements that enhance the impact of player decisions and elevate the excitement in every aspect of the game. With a more refined game system, new features and modes, and a visual style directly inspired by cartoon animation, we aim to bring back the experience that captivated players over a decade ago—now tailored for today's audience, with the goal of entertaining and thrilling everyone who plays."
+    },
+    {
+      "question": "WHICH PLATFORMS WILL IT BE AVAILABLE ON?",
+      "answer": "The game is designed exclusively for mobile devices, both Android and iOS."
+    },
+    {
+      "question": "WILL MORE CONTENT BE ADDED?",
+      "answer": "Absolutely! This is just the first version. We plan to progressively add new Wardians, weapons, abilities, spirits, and game modes."
+    },
+    {
+      "question": "WILL THE GAME BE FREE?",
+      "answer": "Yes, downloading and playing House of Wardians will be completely free. The game will include some optional in-app purchases, primarily related to cosmetic items and certain gameplay content. However, progression will be carefully balanced so that all core features are accessible without needing to make any purchases. Our commitment is to provide a fair and enjoyable experience for all players, avoiding any aggressive monetization or pay-to-win mechanics."
+    },
+    {
+      "question": "HOW CAN I WIN MORE BATTLES?",
+      "answer": "Although combat is automatic, the player has a strong influence over how battles unfold. Choosing the right weapons ensures you make the most of your Wardian’s stats and maximize their strengths in combat. Likewise, selecting a spirit that synergizes well with your Wardian’s attributes provides a significant advantage. In short, learning your Wardian’s strengths will allow you to equip them with what suits them best."
+    },
+    {
+      "question": "WILL I KEEP MY WARDIANS WHEN VERSION 1.0 LAUNCHES?",
+      "answer": "Unfortunately, no. During the alpha and beta phases, the game will undergo many changes, so data from those stages will not carry over to the official launch."
+    }
+  ]
   },
   "buttonAndroid": {
     "image": "early-android-en.webp",
