@@ -1,6 +1,6 @@
 ---
 const { lang = "en", title, description } = Astro.props;
-const baseUrl = "https://houseofwardians.com"; 
+const baseUrl = "https://houseofwardians.com";
 ---
 
 <!doctype html>
@@ -17,7 +17,8 @@ const baseUrl = "https://houseofwardians.com";
     <title>{title ?? "House of Wardians – Recluta, lucha, domina."}</title>
     <meta
       name="description"
-      content={description ?? "House of Wardians es un juego de estrategia y combate automático para móviles. Evoluciona a tus luchadores, personalízalos y compite online."}
+      content={description ??
+        "House of Wardians es un juego de estrategia y combate automático para móviles. Evoluciona a tus luchadores, personalízalos y compite online."}
     />
 
     <!-- SEO multilenguaje -->
@@ -27,12 +28,6 @@ const baseUrl = "https://houseofwardians.com";
   </head>
 
   <body>
-    <!-- Cambiador de idioma -->
-    <nav class="flex justify-end gap-4 text-sm p-4">
-      <a href="/es/" class="underline">ES</a>
-      <a href="/en/" class="underline">EN</a>
-    </nav>
-
     <slot />
   </body>
 </html>

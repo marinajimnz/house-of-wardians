@@ -6,13 +6,17 @@ import "../styles/global.css";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
 
-const { content, androidButton, iosButton } = Astro.props;
+const { content, androidButton, iosButton, lang = "es" } = Astro.props;
 
 const imageMap = {
-  "early-android-es.webp": await import("../assets/images/early-android-es.webp"),
-  "early-android-en.webp": await import("../assets/images/early-android-en.webp"),
+  "early-android-es.webp": await import(
+    "../assets/images/early-android-es.webp"
+  ),
+  "early-android-en.webp": await import(
+    "../assets/images/early-android-en.webp"
+  ),
   "early-ios-es.webp": await import("../assets/images/early-ios-es.webp"),
-  "early-ios-en.webp": await import("../assets/images/early-ios-en.webp")
+  "early-ios-en.webp": await import("../assets/images/early-ios-en.webp"),
 };
 ---
 
@@ -40,23 +44,61 @@ const imageMap = {
 
   <!-- REDES - Desktop -->
   <div class="absolute top-4 right-4 flex gap-4 z-20 hidden sm:flex">
-    <a href="https://www.instagram.com/nakamagamestudio/" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.instagram.com/nakamagamestudio/"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.tiktok.com/@nakama_gamestudio" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.tiktok.com/@nakama_gamestudio"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.youtube.com/@Nakamagamestudio" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.youtube.com/@Nakamagamestudio"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="youtube" class="w-full h-full text-white" />
     </a>
+
+    <!-- BOTÓN DE IDIOMA -->
+    <div class="relative group">
+      <button
+        class="flex items-center gap-2 px-3 py-1 bg-white text-black rounded-full text-sm shadow cursor-pointer hover:scale-105 transition-transform"
+      >
+        <span class="text-lg">{lang === "es" ? "🇪🇸" : "🇬🇧"}</span>
+        {lang === "es" ? "Español" : "English"}
+        <Icon name="arrow-down" class="w-3 h-3 ml-1 text-black" />
+      </button>
+
+      <div
+        class="absolute right-0 mt-2 w-32 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200"
+      >
+        <a href="/es/" class="block px-4 py-2 hover:bg-gray-200 rounded-md text-sm"
+          >🇪🇸 Español</a
+        >
+        <a href="/en/" class="block px-4 py-2 hover:bg-gray-200 rounded-md text-sm"
+          >🇬🇧 English</a
+        >
+      </div>
+    </div>
   </div>
 
   <!-- TÍTULOS -->
   <div class="text-center">
-    <h2 class="font-lilita font-bold text-white text-xl md:text-3xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] -rotate-2">
+    <h2
+      class="font-lilita font-bold text-white text-xl md:text-3xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] -rotate-2"
+    >
       {content.subtitle}
     </h2>
-    <h1 class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 mt-2 md:mt-4 lg:mt-6">
+    <h1
+      class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 mt-2 md:mt-4 lg:mt-6"
+    >
       {content.title}
     </h1>
   </div>
@@ -74,7 +116,9 @@ const imageMap = {
   </div>
 
   <!-- BOTONES MULTILINGÜES -->
-    <div class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4">
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4"
+  >
     <a href={androidButton.link} target="_blank">
       <Image
         src={imageMap[androidButton.image as keyof typeof imageMap].default}
@@ -93,24 +137,47 @@ const imageMap = {
 
   <!-- REDES - Mobile -->
   <div class="flex justify-center gap-6 mt-4 sm:hidden z-10">
-    <a href="https://www.instagram.com/nakamagamestudio/" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.instagram.com/nakamagamestudio/"
+      target="_blank"
+      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.tiktok.com/@nakama_gamestudio" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.tiktok.com/@nakama_gamestudio"
+      target="_blank"
+      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.youtube.com/@Nakamagamestudio" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.youtube.com/@Nakamagamestudio"
+      target="_blank"
+      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="youtube" class="w-full h-full text-white" />
     </a>
   </div>
 
   <!-- MODAL VIDEO -->
-  <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div
+    id="videoModal"
+    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
+  >
     <div class="relative w-[90%] md:w-[70%] lg:w-[60%]">
-      <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500" aria-label="Cerrar video">
+      <button
+        id="closeModal"
+        class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500"
+        aria-label="Cerrar video"
+      >
         &times;
       </button>
-      <video id="modalVideo" src="/early-trailer.webm" controls class="w-full rounded-lg shadow-2xl"></video>
+      <video
+        id="modalVideo"
+        src="/early-trailer.webm"
+        controls
+        class="w-full rounded-lg shadow-2xl"></video>
     </div>
   </div>
 </section>
