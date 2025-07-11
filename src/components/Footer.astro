@@ -5,6 +5,8 @@ import { Image } from "astro:assets";
 import Android from "../assets/images/early-android.webp";
 import IOs from "../assets/images/early-ios.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
+
+const { content } = Astro.props;
 ---
 
 <footer class="bg-black border-t border-gray-800">
@@ -61,7 +63,7 @@ import LogoStudio from "../assets/images/logo-nakama.webp";
         <a
           href="/aviso-legal"
           class="hover:text-white transition-colors"
-          target="_blank">Aviso Legal y Política de Privacidad</a
+          target="_blank">{content.legal}</a
         >
       </nav>
 

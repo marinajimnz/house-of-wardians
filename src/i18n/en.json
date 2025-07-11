@@ -7,43 +7,43 @@
     "title1": "get ready.",
     "title2": "face them.",
     "title3": "defeat them.",
-    "content1": "House of Wardians is a strategic auto-battle game focused on fighter management and progression.",
-    "content2": "Designed to offer an accessible yet deep experience, HoW blends RPG, collection, and customization elements with asynchronous multiplayer structure ideal for mobile play."
+    "content1": "House of Wardians is a strategic fighting game with auto-battle mechanics, focused on managing and evolving fighters.",
+    "content2": "Designed to offer an experience that's both accessible and deep, HoW combines RPG elements, collection, and customization with an asynchronous multiplayer structure perfect for mobile sessions."
   },
   "section2": {
-    "titleLine1": "Explore your",
-    "titleLine2": "achievements and rewards",
-    "description": "Designed to offer an accessible yet deep experience, HoW blends RPG, collection, and customization elements with asynchronous multiplayer structure ideal for mobile play.",
+    "titleLine1": "Discover your achievements",
+    "titleLine2": "and rewards",
+    "description": "Designed to offer an experience that's both accessible and deep, HoW combines RPG elements, collection, and customization with an asynchronous multiplayer structure perfect for mobile sessions.",
     "features": [
       {
-        "title1": "Tactical gameplay",
-        "text1": "Prepare your team with smart combinations. Battles are automatic, but strategy makes the difference.",
-        "alt1": "Tactical gameplay icon"
+        "title": "Tactical gameplay",
+        "text": "Prepare your team with smart combinations. Battles are automatic, but strategy makes the difference.",
+        "alt": "Icon for tactical gameplay"
       },
       {
-        "title2": "Master your Wardians",
-        "text2": "Recruit, train and evolve unique creatures. Each Wardian has abilities to build your own playstyle.",
-        "alt2": "Wardians icon"
+        "title": "Master your Wardians",
+        "text": "Recruit, train, and evolve unique creatures. Each Wardian has its own abilities to build your perfect team.",
+        "alt": "Icon for Wardians"
       },
       {
-        "title3": "Fully customize",
-        "text3": "Change the style and arsenal of your Wardians. Explore unique combinations and gain a tactical edge.",
-        "alt3": "Customization icon"
+        "title": "Maximum customization",
+        "text": "Change the style and gear of your Wardians. Explore unique builds and gain advantage with your own tactical approach.",
+        "alt": "Icon for customization"
       },
       {
-        "title4": "Game modes",
-        "text4": "Compete in the league or challenge friends. Play quick or deep — you choose.",
-        "alt4": "Game modes icon"
+        "title": "Game modes",
+        "text": "Compete in the league or challenge your friends. Play casually or competitively — you decide.",
+        "alt": "Icon for game modes"
       },
       {
-        "title5": "Barrier-free multiplayer",
-        "text5": "Play against others without needing to be online at the same time. Play at your pace, always progressing.",
-        "alt5": "Multiplayer icon"
+        "title": "Barrier-free multiplayer",
+        "text": "Face other players without the need for simultaneous connection. Fight at your own pace and keep progressing.",
+        "alt": "Icon for multiplayer"
       },
       {
-        "title6": "Constant progression",
-        "text6": "Every match makes you stronger. Improve characters, earn trophies, and unlock rewards in ongoing evolution.",
-        "alt6": "Progress icon"
+        "title": "Constant progression",
+        "text": "Every match makes you stronger. Improve characters, earn trophies, and unlock rewards in a non-stop evolution.",
+        "alt": "Icon for progression"
       }
     ]
   },
@@ -55,31 +55,31 @@
     "questions": [
       {
         "question": "WHAT IS HOUSE OF WARDIANS?",
-        "answer": "House of Wardians is inspired by the classic browser game 'El Bruto', reimagined for today's mobile world with deeper mechanics and high player impact..."
+        "answer": "House of Wardians is a project born from the idea of reviving the spirit of the classic browser game 'El Bruto' and adapting it to modern gameplay mechanics..."
       },
       {
-        "question": "WHAT PLATFORMS WILL IT BE ON?",
-        "answer": "The game is designed exclusively for Android and iOS devices."
+        "question": "WHAT PLATFORMS WILL IT BE AVAILABLE ON?",
+        "answer": "The game is designed exclusively for mobile devices, both Android and iOS."
       },
       {
         "question": "WILL MORE CONTENT BE ADDED?",
-        "answer": "Absolutely! This is just the first version..."
+        "answer": "Absolutely! This is just the first version. We plan to add new Wardians, weapons, abilities, spirits, and game modes over time."
       },
       {
         "question": "WILL THE GAME BE FREE?",
-        "answer": "Yes, House of Wardians will be completely free to download and play..."
+        "answer": "Yes, downloading and playing House of Wardians will be completely free. There will be optional in-app purchases, mainly cosmetic or content-related, but the core experience will remain fair and accessible without spending."
       },
       {
         "question": "HOW CAN I WIN MORE BATTLES?",
-        "answer": "Even though the battles are automatic, your decisions impact the outcome..."
+        "answer": "Although combat is automatic, your choices greatly impact battles. Choosing the right weapon and spirit that synergize with your Wardian’s stats will give you an edge. Learning their strengths is key to optimizing your build."
       },
       {
-        "question": "WILL I KEEP MY WARDIANS IN THE FINAL VERSION?",
-        "answer": "Unfortunately, no. During alpha/beta, the game will undergo changes and data will be reset..."
+        "question": "WILL I KEEP MY WARDIANS WHEN VERSION 1.0 LAUNCHES?",
+        "answer": "Unfortunately not. During the alpha and beta phases, the game will undergo many changes, so progress won’t carry over to the final release."
       }
     ]
   },
   "footer": {
-    "legal": "Legal Notice & Privacy Policy"
+    "legal": "Legal Notice and Privacy Policy"
   }
 }

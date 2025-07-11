@@ -1,18 +1,25 @@
 ---
 import { Image } from "astro:assets";
-import "../styles/global.css";
 import Pattern from "./Pattern.astro";
+import "../styles/global.css";
 
-import Jugabilidad from "../assets/images/jugabilidad.webp";
-import Modos from "../assets/images/modos.webp";
-import Multijugador from "../assets/images/multijugador.webp";
-import Personaliza from "../assets/images/personaliza.webp";
-import Progresa from "../assets/images/progresa.webp";
-import Wardians from "../assets/images/wardians.webp";
+type FeatureItem = {
+  title: string;
+  text: string;
+  alt: string;
+};
 
 const { content } = Astro.props;
----
 
+const imageMap = [
+  await import("../assets/images/jugabilidad.webp"),
+  await import("../assets/images/wardians.webp"),
+  await import("../assets/images/personaliza.webp"),
+  await import("../assets/images/modos.webp"),
+  await import("../assets/images/multijugador.webp"),
+  await import("../assets/images/progresa.webp"),
+];
+---
 <section
   class="sticky top-0 h-screen z-20 bg-[url('/purple-background.webp')] bg-cover bg-center bg-fixed text-white flex flex-col items-center justify-center px-6 overflow-hidden fade-in-on-scroll"
 >
@@ -31,117 +38,37 @@ const { content } = Astro.props;
       {content.titleLine2}
     </h2>
 
-    <!-- DESCRIPCIÓN -->
-    <p
-      class="font-lilita mt-4 text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
-    >
+    <p class="font-lilita mt-4 text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
       {content.description}
     </p>
   </div>
 
-  <!-- ICONOS -->
+  <!-- FEATURES (DINÁMICO) -->
   <div
-    class="grid grid-cols-2 grid-rows-3 gap-y-12 gap-x-8 z-20 px-4 sm:grid-cols-2 sm:grid-rows-auto lg:grid-cols-3"
+    class="grid grid-cols-2 grid-rows-3 gap-y-12 gap-x-8 z-20 px-4 sm:grid-cols-2 lg:grid-cols-3"
   >
-    <div class="flex flex-col items-center text-center">
-      <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
-        <Image src={Jugabilidad} alt="Icono de jugabilidad táctica" />
+    {content.features.map((feature: FeatureItem, index: number) => (
+      <div class="flex flex-col items-center text-center">
+        <div class={(index % 2 === 0 ? "animate-float-fast" : "animate-float-slow") + " w-20 sm:w-24 md:w-28 lg:w-32 mb-4"}>
+          <Image
+            src={imageMap[index].default}
+            alt={feature.alt}
+          />
+        </div>
+        <h3 class="text-lg md:text-xl font-bold mb-1">
+          {feature.title}
+        </h3>
+        <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
+          {feature.text}
+        </p>
       </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">
-        {content.features[0].title1}
-      </h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        {content.features[0].text1}
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
-        <Image src={Wardians} alt="Icono de Wardians" />
-      </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">
-        {content.features[1].title2}
-      </h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        {content.features[1].text2}
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
-        <Image src={Personaliza} alt="Icono de personalización" />
-      </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">
-        {content.features[2].title3}
-      </h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        {content.features[2].text3}
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
-        <Image src={Modos} alt="Icono de modos de juego" />
-      </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">
-        {content.features[3].title4}
-      </h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        {content.features[3].text4}
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
-        <Image src={Multijugador} alt="Icono de multijugador" />
-      </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">
-        {content.features[4].title5}
-      </h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        {content.features[4].text5}
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
-        <Image src={Progresa} alt="Icono de progreso" />
-      </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">
-        {content.features[5].title6}
-      </h3>
-      <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        {content.features[5].text6}
-      </p>
-    </div>
+    ))}
   </div>
 </section>
 
-<script>
-  if (typeof window !== "undefined") {
-    const fadeObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-          } else {
-            entry.target.classList.remove("fade-in");
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-
-    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
-      fadeObserver.observe(el);
-    });
-  }
-</script>
-
 <style>
   @keyframes float {
-    0%,
-    100% {
+    0%, 100% {
       transform: translateY(0);
     }
     50% {
@@ -166,3 +93,24 @@ const { content } = Astro.props;
     opacity: 1;
   }
 </style>
+
+<script>
+  if (typeof window !== "undefined") {
+    const fadeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          } else {
+            entry.target.classList.remove("fade-in");
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+      fadeObserver.observe(el);
+    });
+  }
+</script>
