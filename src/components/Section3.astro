@@ -32,7 +32,7 @@ const gameplays = [
   { src: Gameplay11, alt: "Imagen de gameplay del juego: pantalla de batalla entre Wardian y espíritu escenario 1" }
 ];
 
-const { title } = Astro.props;
+const { content } = Astro.props;
 ---
 
 <section
@@ -45,7 +45,7 @@ const { title } = Astro.props;
     <h2
       class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
     >
-      {title}
+      {content.title}
     </h2>
   </div>
 
