@@ -9,8 +9,10 @@ type FeatureItem = {
   alt: string;
 };
 
+// Props
 const { content } = Astro.props;
 
+// Mapeo de imágenes
 const imageMap = [
   await import("../assets/images/jugabilidad.webp"),
   await import("../assets/images/wardians.webp"),

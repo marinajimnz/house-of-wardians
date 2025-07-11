@@ -4,10 +4,10 @@ import { Image } from "astro:assets";
 
 import LogoStudio from "../assets/images/logo-nakama.webp";
 
-// Props desestructuradas
+// Props
 const { content, lang = "es", androidButton, iosButton } = Astro.props;
 
-// Mapeo de imágenes por idioma
+// Mapeo de imágenes
 const imageMap = {
   "early-android-es.webp": await import("../assets/images/early-android-es.webp"),
   "early-android-en.webp": await import("../assets/images/early-android-en.webp"),

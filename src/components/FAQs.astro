@@ -9,11 +9,9 @@ type FAQItem = {
 
 // Props
 const { content, discordButton } = Astro.props;
-
-// Tipado de preguntas
 const faqs: FAQItem[] = content.questions;
 
-// Mapeo de imágenes multilingües
+// Mapeo de imágenes
 const discordImageMap = {
   "discord-es.webp": await import("../assets/images/discord-es.webp"),
   "discord-en.webp": await import("../assets/images/discord-en.webp")
@@ -40,7 +38,7 @@ const discordImageMap = {
       </a>
     </div>
 
-    <!-- FAQ List -->
+    <!-- FAQ -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-start">
       {faqs.map((faq, index) => (
         <div class="faq-item bg-white/5 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/8 hover:-translate-y-1">
