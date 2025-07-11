@@ -9,10 +9,14 @@ import Divider from "../../components/Divider.astro";
 import FAQs from "../../components/FAQs.astro";
 import Footer from "../../components/Footer.astro";
 
-import content from "../../i18n/en.json"; // Este archivo debes crearlo con las traducciones en inglés
+import content from "../../i18n/en.json";
 ---
 
-<Layout lang="en">
+<Layout
+  lang="en"
+  title="House of Wardians – Strategic mobile fighting game"
+  description="House of Wardians is a tactical auto-battle mobile game. Recruit, evolve and compete against other players."
+>
   <div class="relative h-[400vh]">
     <Hero content={content.hero} />
     <Divider />

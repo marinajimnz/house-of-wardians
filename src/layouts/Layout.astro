@@ -1,24 +1,38 @@
+---
+const { lang = "en", title, description } = Astro.props;
+const baseUrl = "https://houseofwardians.com"; 
+---
+
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
       rel="stylesheet"
     />
+
+    <title>{title ?? "House of Wardians – Recluta, lucha, domina."}</title>
     <meta
       name="description"
-      content="House of Wardians es un juego de estrategia y combate automático para móviles. Evoluciona a tus luchadores, personalízalos y compite online."
+      content={description ?? "House of Wardians es un juego de estrategia y combate automático para móviles. Evoluciona a tus luchadores, personalízalos y compite online."}
     />
-    <title>House of Wardians – Recluta, lucha, domina.</title>
+
+    <!-- SEO multilenguaje -->
+    <link rel="alternate" href={`${baseUrl}/es/`} hreflang="es" />
+    <link rel="alternate" href={`${baseUrl}/en/`} hreflang="en" />
+    <link rel="alternate" href={baseUrl} hreflang="x-default" />
   </head>
+
   <body>
-    <nav class="flex justify-end gap-4 text-sm">
+    <!-- Cambiador de idioma -->
+    <nav class="flex justify-end gap-4 text-sm p-4">
       <a href="/es/" class="underline">ES</a>
       <a href="/en/" class="underline">EN</a>
     </nav>
+
     <slot />
   </body>
 </html>
