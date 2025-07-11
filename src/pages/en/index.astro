@@ -1,5 +1,4 @@
 ---
-// Inglés
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import Section1 from "../../components/Section1.astro";
@@ -14,16 +13,55 @@ import content from "../../i18n/en.json";
 
 <Layout
   lang="en"
-  title="House of Wardians – Strategic mobile fighting game"
-  description="House of Wardians is a tactical auto-battle mobile game. Recruit, evolve and compete against other players."
+  title="House of Wardians – Strategy Mobile Game"
+  description="House of Wardians is a strategic auto-battle mobile game. Recruit, evolve and compete from your phone."
 >
   <div class="relative h-[400vh]">
-    <Hero content={content.hero} />
+    <Hero
+      content={content.hero}
+      androidButton={{
+        link: content.buttonAndroid.href,
+        image: content.buttonAndroid.image,
+        alt: content.buttonAndroid.alt
+      }}
+      iosButton={{
+        link: content.buttonIos.href,
+        image: content.buttonIos.image,
+        alt: content.buttonIos.alt
+      }}
+    />
     <Divider />
-    <Section1 content={content.section1} />
+    <Section1
+      content={content.section1}
+      discordButton={{
+        link: content.buttonDiscord.href,
+        image: content.buttonDiscord.image,
+        alt: content.buttonDiscord.alt
+      }}
+    />
     <Section2 content={content.section2} />
     <Section3 content={content.section3} />
-    <FAQs content={content.faqs} />
-    <Footer content={content.footer} lang="en" />
+    <FAQs
+      content={content.faqs}
+      discordButton={{
+        link: content.buttonDiscord.href,
+        image: content.buttonDiscord.image,
+        alt: content.buttonDiscord.alt
+      }}
+    />
+    <Footer
+      content={content.footer}
+      lang="en"
+      androidButton={{
+        link: content.buttonAndroid.href,
+        image: content.buttonAndroid.image,
+        alt: content.buttonAndroid.alt
+      }}
+      iosButton={{
+        link: content.buttonIos.href,
+        image: content.buttonIos.image,
+        alt: content.buttonIos.alt
+      }}
+    />
   </div>
 </Layout>

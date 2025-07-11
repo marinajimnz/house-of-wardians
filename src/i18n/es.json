@@ -1,17 +1,7 @@
 {
   "hero": {
     "title": "WARDIANS!",
-    "subtitle": "¡LLEGAN LOS",
-    "buttons": {
-      "android": {
-        "image": "early-android-es.webp",
-        "alt": "Botón de acceso al early access del juego en Android"
-      },
-      "ios": {
-        "image": "early-ios-es.webp",
-        "alt": "Botón de acceso al early access del juego en iOS"
-      }
-    }
+    "subtitle": "¡LLEGAN LOS"
   },
   "section1": {
     "title1": "prepárate.",
@@ -23,7 +13,6 @@
   "section2": {
     "titleLine1": "Explora tus logros",
     "titleLine2": "y recompensas",
-    "description": "Diseñado para ofrecer una experiencia accesible pero profunda, HoW combina elementos de RPG, coleccionismo y personalización con una estructura multijugador asíncrona ideal para sesiones móviles.",
     "features": [
       {
         "title": "Jugabilidad táctica",
@@ -89,17 +78,22 @@
       }
     ]
   },
-"footer": {
-  "legal": "Aviso Legal y Política de Privacidad",
-  "buttons": {
-    "android": {
-        "image": "early-android-es.webp",
-        "alt": "Botón de acceso al early access del juego en Android"
-      },
-      "ios": {
-        "image": "early-ios-es.webp",
-        "alt": "Botón de acceso al early access del juego en iOS"
-      }
-    }
+  "buttonAndroid": {
+    "image": "early-android-es.webp",
+    "alt": "Botón de acceso al early access del juego en Android",
+    "href": "https://play.google.com/store/apps/details?id=com.nakamagamestudio.elgolpeador"
+  },
+  "buttonIos": {
+    "image": "early-ios-es.webp",
+    "alt": "Botón de acceso al early access del juego en iOS",
+    "href": "https://testflight.apple.com/join/144rz1z5"
+  },
+  "buttonDiscord": {
+    "image": "discord-es.webp",
+    "alt": "Únete a nuestro servidor de Discord",
+    "href": "https://discord.com/invite/zrYVRFbx4u"
+  },
+  "footer": {
+    "legal": "Aviso Legal y Política de Privacidad"
   }
 }

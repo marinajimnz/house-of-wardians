@@ -6,7 +6,7 @@ import "../styles/global.css";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
 
-const { content } = Astro.props;
+const { content, androidButton, iosButton } = Astro.props;
 
 const imageMap = {
   "early-android-es.webp": await import("../assets/images/early-android-es.webp"),
@@ -74,18 +74,18 @@ const imageMap = {
   </div>
 
   <!-- BOTONES MULTILINGÜES -->
-  <div class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4">
-    <a href="https://play.google.com/store/apps/details?id=com.nakamagamestudio.elgolpeador" target="_blank">
+    <div class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4">
+    <a href={androidButton.link} target="_blank">
       <Image
-        src={imageMap[content.buttons.android.image as keyof typeof imageMap].default}
-        alt={content.buttons.android.alt}
+        src={imageMap[androidButton.image as keyof typeof imageMap].default}
+        alt={androidButton.alt}
         class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
       />
     </a>
-    <a href="https://testflight.apple.com/join/144rz1z5" target="_blank">
+    <a href={iosButton.link} target="_blank">
       <Image
-        src={imageMap[content.buttons.ios.image as keyof typeof imageMap].default}
-        alt={content.buttons.ios.alt}
+        src={imageMap[iosButton.image as keyof typeof imageMap].default}
+        alt={iosButton.alt}
         class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
       />
     </a>

@@ -1,15 +1,23 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import Discord from "../assets/images/discord.webp";
 
 type FAQItem = {
   question: string;
   answer: string;
 };
 
-const { content } = Astro.props;
+// Props
+const { content, discordButton } = Astro.props;
+
+// Tipado de preguntas
 const faqs: FAQItem[] = content.questions;
+
+// Mapeo de imágenes multilingües
+const discordImageMap = {
+  "discord-es.webp": await import("../assets/images/discord-es.webp"),
+  "discord-en.webp": await import("../assets/images/discord-en.webp")
+};
 ---
 
 <section class="bg-[url('/blue-background.webp')] py-20">
@@ -21,14 +29,12 @@ const faqs: FAQItem[] = content.questions;
           {content.title.toUpperCase()}
         </h2>
       </div>
-      <a
-        href="https://discord.com/invite/zrYVRFbx4u"
-        target="_blank"
-        class="flex justify-center items-center"
-      >
+
+      <!-- Botón de Discord -->
+      <a href={discordButton.link} target="_blank" class="flex justify-center items-center">
         <Image
-          src={Discord}
-          alt="Discord server button"
+          src={discordImageMap[discordButton.image as keyof typeof discordImageMap].default}
+          alt={discordButton.alt}
           class="w-80 md:w-full hover:scale-105 transition-transform duration-200"
         />
       </a>
@@ -78,13 +84,13 @@ const faqs: FAQItem[] = content.questions;
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".faq-question").forEach((button) => {
-      button.addEventListener("click", (e) => {
+      button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
         if (!item) return;
 
         const isActive = item.classList.contains("active");
 
-        document.querySelectorAll(".faq-item").forEach(i =>
+        document.querySelectorAll(".faq-item").forEach((i) =>
           i.classList.remove("active")
         );
 
