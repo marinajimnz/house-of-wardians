@@ -1,26 +1,25 @@
 ---
-import '../../styles/global.css';
-import Layout from '../../layouts/Layout.astro';
-import Hero from '../../components/Hero.astro';
-import Section1 from '../../components/Section1.astro';
-import Section2 from '../../components/Section2.astro';
-import Section3 from '../../components/Section3.astro';
-import Divider from '../../components/Divider.astro';
-import FAQs from '../../components/FAQs.astro';
-import Footer from '../../components/Footer.astro';
+// Español
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Section1 from "../../components/Section1.astro";
+import Section2 from "../../components/Section2.astro";
+import Section3 from "../../components/Section3.astro";
+import Divider from "../../components/Divider.astro";
+import FAQs from "../../components/FAQs.astro";
+import Footer from "../../components/Footer.astro";
 
+import content from "../../i18n/es.json";
 ---
 
-<Layout>
-	<div class="relative h-[400vh]">
-	<Hero />
-	<Divider />
-	<Section1 />
-	<Section2 />
-	<Section3 />
-	<FAQs />
-	<Footer />
-	</div>
+<Layout lang="es">
+  <div class="relative h-[400vh]">
+    <Hero content={content.hero} />
+    <Divider />
+    <Section1 content={content.section1} />
+    <Section2 content={content.section2} />
+    <Section3 content={content.section3} />
+    <FAQs content={content.faqs} />
+    <Footer content={content.footer} />
+  </div>
 </Layout>
-
-

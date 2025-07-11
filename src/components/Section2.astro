@@ -9,6 +9,8 @@ import Multijugador from "../assets/images/multijugador.webp";
 import Personaliza from "../assets/images/personaliza.webp";
 import Progresa from "../assets/images/progresa.webp";
 import Wardians from "../assets/images/wardians.webp";
+
+const { content } = Astro.props;
 ---
 
 <section
@@ -21,21 +23,19 @@ import Wardians from "../assets/images/wardians.webp";
     <h2
       class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
     >
-      Explora tus logros
+      {content.titleLine1}
     </h2>
     <h2
       class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
     >
-      y recompensas
+      {content.titleLine2}
     </h2>
 
     <!-- DESCRIPCIÓN -->
     <p
       class="font-lilita mt-4 text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
     >
-      Diseñado para ofrecer una experiencia accesible pero profunda, HoW combina
-      elementos de RPG, coleccionismo y personalización con una estructura
-      multijugador asíncrona ideal para sesiones móviles.
+      {content.description}
     </p>
   </div>
 
@@ -47,10 +47,11 @@ import Wardians from "../assets/images/wardians.webp";
       <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Jugabilidad} alt="Icono de jugabilidad táctica" />
       </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">Jugabilidad táctica</h3>
+      <h3 class="text-lg md:text-xl font-bold mb-1">
+        {content.features[0].title1}
+      </h3>
       <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        Prepara a tu equipo con combinaciones inteligentes. Las batallas son
-        automáticas, pero la estrategia marca la diferencia.
+        {content.features[0].text1}
       </p>
     </div>
 
@@ -58,10 +59,11 @@ import Wardians from "../assets/images/wardians.webp";
       <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Wardians} alt="Icono de Wardians" />
       </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">Domina a tus Wardians</h3>
+      <h3 class="text-lg md:text-xl font-bold mb-1">
+        {content.features[1].title2}
+      </h3>
       <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        Recluta, entrena y evoluciona criaturas únicas. Cada Wardian tiene
-        habilidades propias para crear builds a tu medida.
+        {content.features[1].text2}
       </p>
     </div>
 
@@ -69,10 +71,11 @@ import Wardians from "../assets/images/wardians.webp";
       <div class="animate-float-fast w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Personaliza} alt="Icono de personalización" />
       </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">Personaliza al máximo</h3>
+      <h3 class="text-lg md:text-xl font-bold mb-1">
+        {content.features[2].title3}
+      </h3>
       <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        Cambia el estilo y arsenal de tus Wardians. Explora combinaciones únicas
-        y saca ventaja con tu propio enfoque táctico.
+        {content.features[2].text3}
       </p>
     </div>
 
@@ -80,10 +83,11 @@ import Wardians from "../assets/images/wardians.webp";
       <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Modos} alt="Icono de modos de juego" />
       </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">Modos de juego</h3>
+      <h3 class="text-lg md:text-xl font-bold mb-1">
+        {content.features[3].title4}
+      </h3>
       <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        Compite en la liga o reta a tus amigos. Juega rápido o a fondo, tú
-        decides cómo enfrentarte.
+        {content.features[3].text4}
       </p>
     </div>
 
@@ -92,11 +96,10 @@ import Wardians from "../assets/images/wardians.webp";
         <Image src={Multijugador} alt="Icono de multijugador" />
       </div>
       <h3 class="text-lg md:text-xl font-bold mb-1">
-        Multijugador sin barreras
+        {content.features[4].title5}
       </h3>
       <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        Enfréntate a otros jugadores sin conexión simultánea. Combate a tu ritmo
-        y mantén el progreso siempre activo.
+        {content.features[4].text5}
       </p>
     </div>
 
@@ -104,10 +107,11 @@ import Wardians from "../assets/images/wardians.webp";
       <div class="animate-float-slow w-20 sm:w-24 md:w-28 lg:w-32 mb-4">
         <Image src={Progresa} alt="Icono de progreso" />
       </div>
-      <h3 class="text-lg md:text-xl font-bold mb-1">Progresión constante</h3>
+      <h3 class="text-lg md:text-xl font-bold mb-1">
+        {content.features[5].title6}
+      </h3>
       <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-        Cada partida te hace más fuerte. Mejora personajes, consigue trofeos y
-        desbloquea recompensas en una evolución sin pausas.
+        {content.features[5].text6}
       </p>
     </div>
   </div>

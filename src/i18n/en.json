@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "WARDIANS!",
+    "subtitle": "HERE COME THE"
+  },
+  "section1": {
+    "title1": "get ready.",
+    "title2": "face them.",
+    "title3": "defeat them.",
+    "content1": "House of Wardians is a strategic auto-battle game focused on fighter management and progression.",
+    "content2": "Designed to offer an accessible yet deep experience, HoW blends RPG, collection, and customization elements with asynchronous multiplayer structure ideal for mobile play."
+  },
+  "section2": {
+    "titleLine1": "Explore your",
+    "titleLine2": "achievements and rewards",
+    "description": "Designed to offer an accessible yet deep experience, HoW blends RPG, collection, and customization elements with asynchronous multiplayer structure ideal for mobile play.",
+    "features": [
+      {
+        "title1": "Tactical gameplay",
+        "text1": "Prepare your team with smart combinations. Battles are automatic, but strategy makes the difference.",
+        "alt1": "Tactical gameplay icon"
+      },
+      {
+        "title2": "Master your Wardians",
+        "text2": "Recruit, train and evolve unique creatures. Each Wardian has abilities to build your own playstyle.",
+        "alt2": "Wardians icon"
+      },
+      {
+        "title3": "Fully customize",
+        "text3": "Change the style and arsenal of your Wardians. Explore unique combinations and gain a tactical edge.",
+        "alt3": "Customization icon"
+      },
+      {
+        "title4": "Game modes",
+        "text4": "Compete in the league or challenge friends. Play quick or deep — you choose.",
+        "alt4": "Game modes icon"
+      },
+      {
+        "title5": "Barrier-free multiplayer",
+        "text5": "Play against others without needing to be online at the same time. Play at your pace, always progressing.",
+        "alt5": "Multiplayer icon"
+      },
+      {
+        "title6": "Constant progression",
+        "text6": "Every match makes you stronger. Improve characters, earn trophies, and unlock rewards in ongoing evolution.",
+        "alt6": "Progress icon"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Are you ready?"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "WHAT IS HOUSE OF WARDIANS?",
+        "answer": "House of Wardians is inspired by the classic browser game 'El Bruto', reimagined for today's mobile world with deeper mechanics and high player impact..."
+      },
+      {
+        "question": "WHAT PLATFORMS WILL IT BE ON?",
+        "answer": "The game is designed exclusively for Android and iOS devices."
+      },
+      {
+        "question": "WILL MORE CONTENT BE ADDED?",
+        "answer": "Absolutely! This is just the first version..."
+      },
+      {
+        "question": "WILL THE GAME BE FREE?",
+        "answer": "Yes, House of Wardians will be completely free to download and play..."
+      },
+      {
+        "question": "HOW CAN I WIN MORE BATTLES?",
+        "answer": "Even though the battles are automatic, your decisions impact the outcome..."
+      },
+      {
+        "question": "WILL I KEEP MY WARDIANS IN THE FINAL VERSION?",
+        "answer": "Unfortunately, no. During alpha/beta, the game will undergo changes and data will be reset..."
+      }
+    ]
+  },
+  "footer": {
+    "legal": "Legal Notice & Privacy Policy"
+  }
+}

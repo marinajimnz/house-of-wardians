@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "WARDIANS!",
+    "subtitle": "¡LLEGAN LOS"
+  },
+  "section1": {
+    "title1": "prepárate.",
+    "title2": "enfréntalos.",
+    "title3": "véncelos.",
+    "content1": "House of Wardians es un juego de lucha estratégico con combate automático, centrado en la gestión y evolución de luchadores.",
+    "content2": "Diseñado para ofrecer una experiencia accesible pero profunda, HoW combina elementos de RPG, coleccionismo y personalización con una estructura multijugador asíncrona ideal para sesiones móviles."
+  },
+  "section2": {
+    "titleLine1": "Explora tus logros",
+    "titleLine2": "y recompensas",
+    "description": "Diseñado para ofrecer una experiencia accesible pero profunda, HoW combina elementos de RPG, coleccionismo y personalización con una estructura multijugador asíncrona ideal para sesiones móviles.",
+    "features": [
+      {
+        "title": "Jugabilidad táctica",
+        "text": "Prepara a tu equipo con combinaciones inteligentes. Las batallas son automáticas, pero la estrategia marca la diferencia.",
+        "alt": "Icono de jugabilidad táctica"
+      },
+      {
+        "title": "Domina a tus Wardians",
+        "text": "Recluta, entrena y evoluciona criaturas únicas. Cada Wardian tiene habilidades propias para crear builds a tu medida.",
+        "alt": "Icono de Wardians"
+      },
+      {
+        "title": "Personaliza al máximo",
+        "text": "Cambia el estilo y arsenal de tus Wardians. Explora combinaciones únicas y saca ventaja con tu propio enfoque táctico.",
+        "alt": "Icono de personalización"
+      },
+      {
+        "title": "Modos de juego",
+        "text": "Compite en la liga o reta a tus amigos. Juega rápido o a fondo, tú decides cómo enfrentarte.",
+        "alt": "Icono de modos de juego"
+      },
+      {
+        "title": "Multijugador sin barreras",
+        "text": "Enfréntate a otros jugadores sin conexión simultánea. Combate a tu ritmo y mantén el progreso siempre activo.",
+        "alt": "Icono de multijugador"
+      },
+      {
+        "title": "Progresión constante",
+        "text": "Cada partida te hace más fuerte. Mejora personajes, consigue trofeos y desbloquea recompensas en una evolución sin pausas.",
+        "alt": "Icono de progreso"
+      }
+    ]
+  },
+  "section3": {
+    "title": "¿Estás preparado?"
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "questions": [
+      {
+        "question": "¿QUÉ ES HOUSE OF WARDIANS?",
+        "answer": "House of Wardians es un proyecto nacido de la idea de rescatar el concepto del mítico juego de navegador 'El Bruto'..."
+      },
+      {
+        "question": "¿EN QUÉ PLATAFORMAS ESTARÁ DISPONIBLE?",
+        "answer": "El juego está diseñado exclusivamente para dispositivos móviles, tanto Android como iOS."
+      },
+      {
+        "question": "¿SE VA A AÑADIR MÁS CONTENIDO?",
+        "answer": "¡Por supuesto! Esta es solo una primera versión..."
+      },
+      {
+        "question": "¿EL JUEGO SERÁ GRATUITO?",
+        "answer": "Sí, descargar y jugar a House of Wardians será completamente gratuito..."
+      },
+      {
+        "question": "¿CÓMO PUEDO GANAR MÁS COMBATES?",
+        "answer": "Pese a que el combate sea automático, el jugador posee gran impacto sobre el desarrollo de las batallas..."
+      },
+      {
+        "question": "¿CONSERVARÉ MIS WARDIANS CUANDO SE LANCE LA VERSIÓN 1.0?",
+        "answer": "Lamentablemente, no. Durante el período de alpha y beta, el juego estará sujeto a múltiples cambios..."
+      }
+    ]
+  },
+  "footer": {
+    "legal": "Aviso Legal y Política de Privacidad"
+  }
+}
