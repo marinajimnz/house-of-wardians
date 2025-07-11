@@ -5,10 +5,15 @@ import "../styles/global.css";
 
 import LogoStudio from "../assets/images/logo-nakama.webp";
 import LogoGame from "../assets/images/logo-how.webp";
-import Android from "../assets/images/early-android.webp";
-import IOs from "../assets/images/early-ios.webp";
 
 const { content } = Astro.props;
+
+const imageMap = {
+  "early-android-es.webp": await import("../assets/images/early-android-es.webp"),
+  "early-android-en.webp": await import("../assets/images/early-android-en.webp"),
+  "early-ios-es.webp": await import("../assets/images/early-ios-es.webp"),
+  "early-ios-en.webp": await import("../assets/images/early-ios-en.webp")
+};
 ---
 
 <section
@@ -33,41 +38,25 @@ const { content } = Astro.props;
     />
   </div>
 
-  <!-- RRSS - Desktop -->
+  <!-- REDES - Desktop -->
   <div class="absolute top-4 right-4 flex gap-4 z-20 hidden sm:flex">
-    <a
-      href="https://www.instagram.com/nakamagamestudio/"
-      target="_blank"
-      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-    >
+    <a href="https://www.instagram.com/nakamagamestudio/" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
-    <a
-      href="https://www.tiktok.com/@nakama_gamestudio"
-      target="_blank"
-      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-    >
+    <a href="https://www.tiktok.com/@nakama_gamestudio" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
-    <a
-      href="https://www.youtube.com/@Nakamagamestudio"
-      target="_blank"
-      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-    >
+    <a href="https://www.youtube.com/@Nakamagamestudio" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
       <Icon name="youtube" class="w-full h-full text-white" />
     </a>
   </div>
 
-  <!-- TÍTULO -->
+  <!-- TÍTULOS -->
   <div class="text-center">
-    <h2
-      class="font-lilita font-bold text-white text-xl md:text-3xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] -rotate-2"
-    >
+    <h2 class="font-lilita font-bold text-white text-xl md:text-3xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] -rotate-2">
       {content.subtitle}
     </h2>
-    <h1
-      class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 mt-2 md:mt-4 lg:mt-6"
-    >
+    <h1 class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 mt-2 md:mt-4 lg:mt-6">
       {content.title}
     </h1>
   </div>
@@ -84,77 +73,44 @@ const { content } = Astro.props;
     ></video>
   </div>
 
-  <!-- BOTONES BETA Y DISCORD -->
-  <div
-    class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4"
-  >
-    <a
-      href="https://play.google.com/store/apps/details?id=com.nakamagamestudio.elgolpeador"
-      target="_blank"
-    >
+  <!-- BOTONES MULTILINGÜES -->
+  <div class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4">
+    <a href="https://play.google.com/store/apps/details?id=com.nakamagamestudio.elgolpeador" target="_blank">
       <Image
-        src={Android}
-        alt="Botón de acceso al early access del juego en android"
+        src={imageMap[content.buttons.android.image as keyof typeof imageMap].default}
+        alt={content.buttons.android.alt}
         class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
       />
     </a>
-    <a
-      href="https://testflight.apple.com/join/144rz1z5"
-      target="_blank"
-      class="block"
-    >
+    <a href="https://testflight.apple.com/join/144rz1z5" target="_blank">
       <Image
-        src={IOs}
-        alt="Botón de acceso al early access del juego en iOS"
+        src={imageMap[content.buttons.ios.image as keyof typeof imageMap].default}
+        alt={content.buttons.ios.alt}
         class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
       />
     </a>
   </div>
 
-  <!-- RRSS - Mobile debajo de botones -->
+  <!-- REDES - Mobile -->
   <div class="flex justify-center gap-6 mt-4 sm:hidden z-10">
-    <a
-      href="https://www.instagram.com/nakamagamestudio/"
-      target="_blank"
-      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-    >
+    <a href="https://www.instagram.com/nakamagamestudio/" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
-    <a
-      href="https://www.tiktok.com/@nakama_gamestudio"
-      target="_blank"
-      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-    >
+    <a href="https://www.tiktok.com/@nakama_gamestudio" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
-    <a
-      href="https://www.youtube.com/@Nakamagamestudio"
-      target="_blank"
-      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-    >
+    <a href="https://www.youtube.com/@Nakamagamestudio" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
       <Icon name="youtube" class="w-full h-full text-white" />
     </a>
   </div>
 
-  <!-- MODAL VIDEO EXPANDIDO -->
-  <div
-    id="videoModal"
-    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
-  >
+  <!-- MODAL VIDEO -->
+  <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
     <div class="relative w-[90%] md:w-[70%] lg:w-[60%]">
-      <button
-        id="closeModal"
-        class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500"
-        aria-label="Cerrar video"
-      >
+      <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500" aria-label="Cerrar video">
         &times;
       </button>
-      <video
-        id="modalVideo"
-        src="/early-trailer.webm"
-        controls
-        class="w-full rounded-lg shadow-2xl"
-      ></video>
+      <video id="modalVideo" src="/early-trailer.webm" controls class="w-full rounded-lg shadow-2xl"></video>
     </div>
   </div>
 </section>

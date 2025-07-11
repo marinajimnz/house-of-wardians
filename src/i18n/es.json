@@ -1,7 +1,17 @@
 {
   "hero": {
     "title": "WARDIANS!",
-    "subtitle": "¡LLEGAN LOS"
+    "subtitle": "¡LLEGAN LOS",
+    "buttons": {
+      "android": {
+        "image": "early-android-es.webp",
+        "alt": "Botón de acceso al early access del juego en Android"
+      },
+      "ios": {
+        "image": "early-ios-es.webp",
+        "alt": "Botón de acceso al early access del juego en iOS"
+      }
+    }
   },
   "section1": {
     "title1": "prepárate.",
@@ -79,7 +89,17 @@
       }
     ]
   },
-  "footer": {
-    "legal": "Aviso Legal y Política de Privacidad"
+"footer": {
+  "legal": "Aviso Legal y Política de Privacidad",
+  "buttons": {
+    "android": {
+        "image": "early-android-es.webp",
+        "alt": "Botón de acceso al early access del juego en Android"
+      },
+      "ios": {
+        "image": "early-ios-es.webp",
+        "alt": "Botón de acceso al early access del juego en iOS"
+      }
+    }
   }
 }

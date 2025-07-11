@@ -1,7 +1,17 @@
 {
   "hero": {
     "title": "WARDIANS!",
-    "subtitle": "HERE COME THE"
+    "subtitle": "HERE COME THE",
+    "buttons": {
+      "android": {
+        "image": "early-android-en.webp",
+        "alt": "Early access button for Android"
+      },
+      "ios": {
+        "image": "early-ios-en.webp",
+        "alt": "Early access button for iOS"
+      }
+    }
   },
   "section1": {
     "title1": "get ready.",
@@ -79,7 +89,17 @@
       }
     ]
   },
-  "footer": {
-    "legal": "Legal Notice and Privacy Policy"
+"footer": {
+  "legal": "Legal Notice and Privacy Policy",
+  "buttons": {
+    "android": {
+        "image": "early-android-en.webp",
+        "alt": "Early access button for Android"
+      },
+      "ios": {
+        "image": "early-ios-en.webp",
+        "alt": "Early access button for iOS"
+      }
+    }
   }
 }

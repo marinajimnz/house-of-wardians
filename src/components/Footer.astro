@@ -2,15 +2,20 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-import Android from "../assets/images/early-android.webp";
-import IOs from "../assets/images/early-ios.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 
 const { content, lang = "es" } = Astro.props;
+
+const imageMap = {
+  "early-android-es.webp": await import("../assets/images/early-android-es.webp"),
+  "early-android-en.webp": await import("../assets/images/early-android-en.webp"),
+  "early-ios-es.webp": await import("../assets/images/early-ios-es.webp"),
+  "early-ios-en.webp": await import("../assets/images/early-ios-en.webp")
+};
 ---
 
 <footer class="bg-black border-t border-gray-800">
-  <!-- BOTÓN BETA Y DISCORD -->
+  <!-- BOTÓN BETA -->
   <div class="border-b border-gray-800 py-4">
     <div class="max-w-7xl mx-auto px-4 flex justify-center">
       <div class="flex gap-3">
@@ -20,8 +25,8 @@ const { content, lang = "es" } = Astro.props;
           class="block"
         >
           <Image
-            src={Android}
-            alt="Botón de acceso al early access del juego en android"
+            src={imageMap[content.buttons.android.image as keyof typeof imageMap].default}
+            alt={content.buttons.android.alt}
             class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
           />
         </a>
@@ -31,8 +36,8 @@ const { content, lang = "es" } = Astro.props;
           class="block"
         >
           <Image
-            src={IOs}
-            alt="Botón de acceso al early access del juego en iOS"
+            src={imageMap[content.buttons.ios.image as keyof typeof imageMap].default}
+            alt={content.buttons.ios.alt}
             class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
           />
         </a>
@@ -40,11 +45,9 @@ const { content, lang = "es" } = Astro.props;
     </div>
   </div>
 
-  <!-- LOGO, LEGAL Y POLITICA DE PRIVACIDAD, RRSS -->
+  <!-- LOGO, LEGAL, RRSS -->
   <div class="py-6">
-    <div
-      class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6"
-    >
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6">
       <!-- Logo -->
       <div class="flex justify-center lg:justify-start w-full lg:w-auto">
         <a href="https://vidibondgames.com/" target="_blank">
@@ -57,9 +60,7 @@ const { content, lang = "es" } = Astro.props;
       </div>
 
       <!-- Política de privacidad -->
-      <nav
-        class="flex justify-center w-full lg:w-auto gap-6 text-sm text-gray-400"
-      >
+      <nav class="flex justify-center w-full lg:w-auto gap-6 text-sm text-gray-400">
         <a
           href={`/${lang}/${lang === "en" ? "legal" : "aviso-legal"}`}
           target="_blank"
@@ -70,9 +71,7 @@ const { content, lang = "es" } = Astro.props;
       </nav>
 
       <!-- RRSS -->
-      <div
-        class="flex justify-center lg:justify-end w-full lg:w-auto items-center gap-4"
-      >
+      <div class="flex justify-center lg:justify-end w-full lg:w-auto items-center gap-4">
         <a
           href="https://www.instagram.com/nakamagamestudio/"
           target="_blank"
