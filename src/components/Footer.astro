@@ -6,7 +6,7 @@ import Android from "../assets/images/early-android.webp";
 import IOs from "../assets/images/early-ios.webp";
 import LogoStudio from "../assets/images/logo-nakama.webp";
 
-const { content } = Astro.props;
+const { content, lang = "es" } = Astro.props;
 ---
 
 <footer class="bg-black border-t border-gray-800">
@@ -61,10 +61,12 @@ const { content } = Astro.props;
         class="flex justify-center w-full lg:w-auto gap-6 text-sm text-gray-400"
       >
         <a
-          href="/aviso-legal"
+          href={`/${lang}/${lang === "en" ? "legal" : "aviso-legal"}`}
+          target="_blank"
           class="hover:text-white transition-colors"
-          target="_blank">{content.legal}</a
         >
+          {content.legal}
+        </a>
       </nav>
 
       <!-- RRSS -->
