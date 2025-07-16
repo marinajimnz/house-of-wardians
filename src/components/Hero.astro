@@ -11,47 +11,85 @@ const { content, androidButton, iosButton, lang } = Astro.props;
 
 // Mapeo de imágenes
 const imageMap = {
-  "early-android-es.webp": await import("../assets/images/early-android-es.webp"),
-  "early-android-en.webp": await import("../assets/images/early-android-en.webp"),
+  "early-android-es.webp": await import(
+    "../assets/images/early-android-es.webp"
+  ),
+  "early-android-en.webp": await import(
+    "../assets/images/early-android-en.webp"
+  ),
   "early-ios-es.webp": await import("../assets/images/early-ios-es.webp"),
   "early-ios-en.webp": await import("../assets/images/early-ios-en.webp"),
 };
 ---
 
-<section class="sticky top-0 h-screen z-10 bg-[url('/hero-background.webp')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center px-6 text-white overflow-hidden">
+<section
+  class="sticky top-0 h-screen z-10 bg-[url('/hero-background.webp')] bg-cover bg-center bg-fixed flex flex-col items-center justify-center px-6 text-white overflow-hidden"
+>
   <!-- NAVBAR -->
   <div class="absolute top-4 left-4 z-20 hidden sm:block">
     <a href="https://vidibondgames.com/" target="_blank">
-      <Image src={LogoStudio} alt="Logo de Nakama Game Studio" class="w-28 md:w-36" />
+      <Image
+        src={LogoStudio}
+        alt="Logo de Nakama Game Studio"
+        class="w-28 md:w-36"
+      />
     </a>
   </div>
 
   <div class="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-    <Image src={LogoGame} alt="Logo de House of Wardians" class="w-40 md:w-60" />
+    <Image
+      src={LogoGame}
+      alt="Logo de House of Wardians"
+      class="w-40 md:w-60"
+    />
   </div>
 
   <!-- REDES - Desktop -->
   <div class="absolute top-4 right-4 flex gap-4 z-20 hidden sm:flex">
-    <a href="https://www.instagram.com/nakamagamestudio/" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.instagram.com/nakamagamestudio/"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.tiktok.com/@nakama_gamestudio" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.tiktok.com/@nakama_gamestudio"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.youtube.com/@Nakamagamestudio" target="_blank" class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.youtube.com/@Nakamagamestudio"
+      target="_blank"
+      class="w-6 md:w-8 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="youtube" class="w-full h-full text-white" />
     </a>
 
     <!-- BOTÓN DE IDIOMA - DESKTOP -->
     <div class="relative group">
-      <button class="flex items-center gap-2 px-3 py-1 bg-white text-black rounded-full text-sm shadow cursor-pointer hover:scale-105 transition-transform drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+      <button
+        class="flex items-center gap-2 px-3 py-1 bg-white text-black rounded-full text-sm shadow cursor-pointer hover:scale-105 transition-transform drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+      >
         <span class="text-lg">{lang === "es" ? "🇪🇸" : "🇬🇧"}</span>
         {lang === "es" ? "Español" : "English"}
         <Icon name="arrow-down" class="w-3 h-3 ml-1 text-black" />
       </button>
-      <div class="absolute right-0 mt-2 w-32 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200">
-        <a href="/es/" class="block px-4 py-2 hover:bg-gray-200 rounded-md text-sm">🇪🇸 Español</a>
-        <a href="/en/" class="block px-4 py-2 hover:bg-gray-200 rounded-md text-sm">🇬🇧 English</a>
+      <div
+        class="absolute right-0 mt-2 w-32 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200"
+      >
+        <a
+          href="/es/"
+          class="block px-4 py-2 hover:bg-gray-200 rounded-md text-sm"
+          >🇪🇸 Español</a
+        >
+        <a
+          href="/en/"
+          class="block px-4 py-2 hover:bg-gray-200 rounded-md text-sm"
+          >🇬🇧 English</a
+        >
       </div>
     </div>
   </div>
@@ -59,55 +97,117 @@ const imageMap = {
   <!-- BOTÓN DE IDIOMA - MÓVIL -->
   <div class="absolute top-4 right-4 z-20 sm:hidden">
     <div class="relative group">
-      <button class="w-10 h-10 rounded-full bg-white text-lg flex items-center justify-center shadow drop-shadow-[4px_4px_0_rgba(0,0,0,1)] hover:scale-110 transition-transform">
+      <button
+        class="w-10 h-10 rounded-full bg-white text-lg flex items-center justify-center shadow drop-shadow-[4px_4px_0_rgba(0,0,0,1)] hover:scale-110 transition-transform"
+      >
         {lang === "es" ? "🇪🇸" : "🇬🇧"}
       </button>
-      <div class="absolute right-0 mt-2 w-28 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200">
-        <a href="/es/" class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-md">🇪🇸 Español</a>
-        <a href="/en/" class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-md">🇬🇧 English</a>
+      <div
+        class="absolute right-0 mt-2 w-28 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200"
+      >
+        <a
+          href="/es/"
+          class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-md"
+          >🇪🇸 Español</a
+        >
+        <a
+          href="/en/"
+          class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-md"
+          >🇬🇧 English</a
+        >
       </div>
     </div>
   </div>
 
   <!-- TÍTULOS -->
   <div class="text-center">
-    <h2 class="font-lilita font-bold text-white text-xl md:text-3xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] -rotate-2">{content.subtitle}</h2>
-    <h1 class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 mt-2 md:mt-4 lg:mt-6">{content.title}</h1>
+    <h2
+      class="font-lilita font-bold text-white text-xl md:text-3xl -rotate-2"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
+    >
+      {content.subtitle}
+    </h2>
+    <h1
+      class="font-lilita font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight -rotate-2 mt-2 md:mt-4 lg:mt-6"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
+    >
+      {content.title}
+    </h1>
   </div>
 
   <!-- VIDEO -->
   <div class="mt-6 z-10">
-    <video id="previewVideo" src="/early-trailer.webm" autoplay muted loop class="w-78 md:w-[32rem] lg:w-[50rem] rounded-xl transition-transform duration-300 hover:scale-110 shadow-xl cursor-pointer drop-shadow-[6px_6px_0_rgba(0,0,0,1)]"></video>
+    <video
+      id="previewVideo"
+      src="/early-trailer.webm"
+      autoplay
+      muted
+      loop
+      class="w-78 md:w-[32rem] lg:w-[50rem] rounded-xl transition-transform duration-300 hover:scale-110 shadow-xl cursor-pointer drop-shadow-[6px_6px_0_rgba(0,0,0,1)]"
+    ></video>
   </div>
 
   <!-- BOTONES MULTILINGÜES -->
-  <div class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4">
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center mt-4 z-10 gap-4"
+  >
     <a href={androidButton.link} target="_blank">
-      <Image src={imageMap[androidButton.image as keyof typeof imageMap].default} alt={androidButton.alt} class="w-48 md:w-64 hover:scale-105 transition-transform duration-200" />
+      <Image
+        src={imageMap[androidButton.image as keyof typeof imageMap].default}
+        alt={androidButton.alt}
+        class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
+      />
     </a>
     <a href={iosButton.link} target="_blank">
-      <Image src={imageMap[iosButton.image as keyof typeof imageMap].default} alt={iosButton.alt} class="w-48 md:w-64 hover:scale-105 transition-transform duration-200" />
+      <Image
+        src={imageMap[iosButton.image as keyof typeof imageMap].default}
+        alt={iosButton.alt}
+        class="w-48 md:w-64 hover:scale-105 transition-transform duration-200"
+      />
     </a>
   </div>
 
   <!-- REDES - Mobile -->
   <div class="flex justify-center gap-6 mt-4 sm:hidden z-10">
-    <a href="https://www.instagram.com/nakamagamestudio/" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.instagram.com/nakamagamestudio/"
+      target="_blank"
+      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="instagram" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.tiktok.com/@nakama_gamestudio" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.tiktok.com/@nakama_gamestudio"
+      target="_blank"
+      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="tiktok" class="w-full h-full text-white" />
     </a>
-    <a href="https://www.youtube.com/@Nakamagamestudio" target="_blank" class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+    <a
+      href="https://www.youtube.com/@Nakamagamestudio"
+      target="_blank"
+      class="w-6 hover:scale-110 transition-transform duration-200 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
+    >
       <Icon name="youtube" class="w-full h-full text-white" />
     </a>
   </div>
 
   <!-- MODAL VIDEO -->
-  <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div
+    id="videoModal"
+    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
+  >
     <div class="relative w-[90%] md:w-[70%] lg:w-[60%]">
-      <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500" aria-label="Cerrar video">&times;</button>
-      <video id="modalVideo" src="/early-trailer.webm" controls class="w-full rounded-lg shadow-2xl"></video>
+      <button
+        id="closeModal"
+        class="absolute top-2 right-2 text-white text-3xl font-bold z-10 hover:text-red-500"
+        aria-label="Cerrar video">&times;</button
+      >
+      <video
+        id="modalVideo"
+        src="/early-trailer.webm"
+        controls
+        class="w-full rounded-lg shadow-2xl"></video>
     </div>
   </div>
 </section>

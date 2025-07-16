@@ -22,6 +22,7 @@ const imageMap = [
   await import("../assets/images/progresa.webp"),
 ];
 ---
+
 <section
   class="sticky top-0 h-screen z-20 bg-[url('/purple-background.webp')] bg-cover bg-center bg-fixed text-white flex flex-col items-center justify-center px-6 overflow-hidden fade-in-on-scroll"
 >
@@ -30,12 +31,14 @@ const imageMap = [
   <!-- TÍTULO -->
   <div class="text-center lg:mt-40 mb-12 z-20 px-4">
     <h2
-      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
+      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold -rotate-2 uppercase"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
     >
       {content.titleLine1}
     </h2>
     <h2
-      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
+      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold -rotate-2 uppercase"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
     >
       {content.titleLine2}
     </h2>
@@ -45,28 +48,31 @@ const imageMap = [
   <div
     class="grid grid-cols-2 grid-rows-3 gap-y-12 gap-x-8 z-20 px-4 sm:grid-cols-2 lg:grid-cols-3"
   >
-    {content.features.map((feature: FeatureItem, index: number) => (
-      <div class="flex flex-col items-center text-center">
-        <div class={(index % 2 === 0 ? "animate-float-fast" : "animate-float-slow") + " w-20 sm:w-24 md:w-28 lg:w-32 mb-4"}>
-          <Image
-            src={imageMap[index].default}
-            alt={feature.alt}
-          />
+    {
+      content.features.map((feature: FeatureItem, index: number) => (
+        <div class="flex flex-col items-center text-center">
+          <div
+            class={
+              (index % 2 === 0 ? "animate-float-fast" : "animate-float-slow") +
+              " w-20 sm:w-24 md:w-28 lg:w-32 mb-4"
+            }
+          >
+            <Image src={imageMap[index].default} alt={feature.alt} />
+          </div>
+          <h3 class="text-lg md:text-xl font-bold mb-1">{feature.title}</h3>
+          <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
+            {feature.text}
+          </p>
         </div>
-        <h3 class="text-lg md:text-xl font-bold mb-1">
-          {feature.title}
-        </h3>
-        <p class="text-sm md:text-base max-w-xs text-white/80 hidden sm:block">
-          {feature.text}
-        </p>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </section>
 
 <style>
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {

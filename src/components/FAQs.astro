@@ -23,15 +23,24 @@ const discordImageMap = {
     <!-- HEADER -->
     <div class="flex flex-col lg:flex-row justify-between items-center mb-16">
       <div class="mb-8 lg:mb-0">
-        <h2 class="font-lilita text-white text-5xl md:text-7xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2">
+        <h2
+          class="font-lilita text-white text-5xl md:text-7xl lg:text-[100px] font-extrabold -rotate-2"
+          style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
+        >
           {content.title.toUpperCase()}
         </h2>
       </div>
 
       <!-- Botón de Discord -->
-      <a href={discordButton.link} target="_blank" class="flex justify-center items-center">
+      <a
+        href={discordButton.link}
+        target="_blank"
+        class="flex justify-center items-center"
+      >
         <Image
-          src={discordImageMap[discordButton.image as keyof typeof discordImageMap].default}
+          src={discordImageMap[
+            discordButton.image as keyof typeof discordImageMap
+          ].default}
           alt={discordButton.alt}
           class="w-80 md:w-full hover:scale-105 transition-transform duration-200"
         />
@@ -40,32 +49,32 @@ const discordImageMap = {
 
     <!-- FAQ -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-start">
-      {faqs.map((faq, index) => (
-        <div class="faq-item bg-white/5 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/8 hover:-translate-y-1">
-          <button
-            class="faq-question w-full bg-transparent border-none p-8 flex justify-between items-center cursor-pointer text-left transition-all duration-300"
-            data-faq={index}
-          >
-            <span class="text-white font-bold text-base tracking-wide leading-relaxed flex-1 mr-5">
-              {faq.question}
-            </span>
-            <span class="sr-only">Toggle answer</span>
-            <span class="toggle-icon text-yellow-400 transition-all duration-300 flex-shrink-0">
-              <Icon
-                name="toggle"
-                class="w-6 h-full text-yellow-400 drop-shadow-[3px_3px_0_rgba(0,0,0,1)]"
-              />
-            </span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="answer-content p-8 pt-0 border-t border-white/10">
-              <p class="text-white/85 leading-relaxed mt-5">
-                {faq.answer}
-              </p>
+      {
+        faqs.map((faq, index) => (
+          <div class="faq-item bg-white/5 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/8 hover:-translate-y-1">
+            <button
+              class="faq-question w-full bg-transparent border-none p-8 flex justify-between items-center cursor-pointer text-left transition-all duration-300"
+              data-faq={index}
+            >
+              <span class="text-white font-bold text-base tracking-wide leading-relaxed flex-1 mr-5">
+                {faq.question}
+              </span>
+              <span class="sr-only">Toggle answer</span>
+              <span class="toggle-icon text-yellow-400 transition-all duration-300 flex-shrink-0">
+                <Icon
+                  name="toggle"
+                  class="w-6 h-full text-yellow-400 drop-shadow-[3px_3px_0_rgba(0,0,0,1)]"
+                />
+              </span>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="answer-content p-8 pt-0 border-t border-white/10">
+                <p class="text-white/85 leading-relaxed mt-5">{faq.answer}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>
@@ -88,9 +97,9 @@ const discordImageMap = {
 
         const isActive = item.classList.contains("active");
 
-        document.querySelectorAll(".faq-item").forEach((i) =>
-          i.classList.remove("active")
-        );
+        document
+          .querySelectorAll(".faq-item")
+          .forEach((i) => i.classList.remove("active"));
 
         if (!isActive) item.classList.add("active");
       });

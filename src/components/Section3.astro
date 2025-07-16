@@ -36,14 +36,15 @@ const { content } = Astro.props;
 ---
 
 <section
-  class="relative top-0 h-screen z-40 bg-[url('/purple-background.webp')] bg-cover bg-center bg-fixed flex flex-col items-center justify-start px-6 text-white overflow-hidden pt-44 pb-20"
+  class="relative top-0 h-screen z-40 bg-[url('/purple-background.webp')] bg-cover bg-center bg-scroll sm:bg-fixed flex flex-col items-center justify-start px-6 text-white overflow-hidden pt-44 pb-20"
 >
   <Pattern />
 
   <!-- TÍTULO -->
   <div class="text-center mb-12 z-30 w-full">
     <h2
-      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold drop-shadow-[5px_5px_0_rgba(0,0,0,1)] -rotate-2"
+      class="font-lilita text-white text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-extrabold -rotate-2 uppercase"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
     >
       {content.title}
     </h2>
@@ -58,13 +59,14 @@ const { content } = Astro.props;
       {
         gameplays.map((img, index) => (
           <div
-            class={`fade-image absolute inset-0 transition-opacity duration-1000 ${
+            class={`fade-image absolute inset-0 transition-opacity duration-1000 will-change-opacity ${
               index === 0 ? "opacity-100" : "opacity-0"
             }`}
           >
             <Image
               src={img.src}
               alt={img.alt}
+              loading="lazy"
               class="w-full h-full object-cover rounded-xl"
             />
           </div>
@@ -72,41 +74,41 @@ const { content } = Astro.props;
       }
     </div>
 
-    <!-- BOTONES FLECHAS  -->
+    <!-- BOTONES -->
     <div class="flex justify-center gap-4 mt-6">
       <Icon
         id="prev"
         name="arrow-left"
-        class="w-12 h-full text-yellow-400 drop-shadow-[3px_3px_0_rgba(0,0,0,1)]"
+        class="w-12 h-full text-yellow-400 sm:drop-shadow-[3px_3px_0_rgba(0,0,0,1)]"
       />
       <Icon
         id="next"
         name="arrow-right"
-        class="w-12 h-full text-yellow-400 drop-shadow-[3px_3px_0_rgba(0,0,0,1)]"
+        class="w-12 h-full text-yellow-400 sm:drop-shadow-[3px_3px_0_rgba(0,0,0,1)]"
       />
     </div>
   </div>
 
   <!-- PERSONAJES -->
   <div
-    class="absolute bottom-10 left-0 w-48 md:w-64 lg:w-[32rem] z-10 transform -scale-x-100"
+    class="absolute bottom-10 left-0 w-48 md:w-64 lg:w-[32rem] z-10 transform -scale-x-100 will-change-transform"
   >
     <div class="relative">
-      <Image src={Tengu} alt="Personaje del juego House of Wardians: Tengu" />
+      <Image src={Tengu} alt="Tengu" />
       <div
-        class="absolute bottom-[1%] left-1/2 transform -translate-x-1/2 w-[60%] h-2 md:h-3 lg:h-4 bg-black/40 rounded-full blur-md z-0"
-      >
-      </div>
+        class="absolute bottom-[1%] left-1/2 transform -translate-x-1/2 w-[60%] h-2 md:h-3 lg:h-4 bg-black/40 rounded-full sm:blur-md z-0"
+      ></div>
     </div>
   </div>
 
-  <div class="absolute bottom-10 right-10 w-44 md:w-56 lg:w-[26rem] z-10">
+  <div
+    class="absolute bottom-10 right-10 w-44 md:w-56 lg:w-[26rem] z-10 will-change-transform"
+  >
     <div class="relative">
-      <Image src={Jinn} alt="Personaje del juego House of Wardians: Jinn" />
+      <Image src={Jinn} alt="Jinn" />
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 w-[65%] h-2 md:h-3 lg:h-4 bg-black/40 rounded-full blur-md z-0"
-      >
-      </div>
+        class="absolute left-1/2 transform -translate-x-1/2 w-[65%] h-2 md:h-3 lg:h-4 bg-black/40 rounded-full sm:blur-md z-0"
+      ></div>
     </div>
   </div>
 </section>

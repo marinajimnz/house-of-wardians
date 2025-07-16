@@ -17,25 +17,25 @@ const discordImageMap = {
 ---
 
 <section
-  class="sticky top-0 h-screen z-20 bg-[url('/purple-background.webp')] bg-cover bg-center bg-fixed text-white flex items-center justify-center px-2 overflow-hidden"
+  class="sticky top-0 h-screen z-20 bg-[url('/purple-background.webp')] bg-cover bg-center bg-scroll sm:bg-fixed text-white flex items-center justify-center px-2 overflow-hidden"
 >
   <Pattern />
 
   <!-- PERSONAJES -->
   <div
-    class="absolute bottom-0 mb-14 left-10 z-10 w-[8rem] md:w-80 lg:w-4/12 transform -scale-x-100"
+    class="absolute bottom-0 mb-14 left-10 z-10 w-[8rem] md:w-80 lg:w-4/12 transform -scale-x-100 will-change-transform"
   >
     <div class="relative">
       <Image src={Human} alt="Personaje del juego House of Wardians: Humano" />
       <div
-        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full blur-md z-0"
+        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full sm:blur-md z-0"
       >
       </div>
     </div>
   </div>
 
   <div
-    class="absolute bottom-0 mb-14 right-0 z-20 w-[14rem] md:w-[40rem] lg:w-6/12"
+    class="absolute bottom-0 mb-14 right-0 z-20 w-[14rem] md:w-[40rem] lg:w-6/12 will-change-transform"
   >
     <div class="relative">
       <Image
@@ -43,31 +43,33 @@ const discordImageMap = {
         alt="Personaje del juego House of Wardians: Cocodrilo"
       />
       <div
-        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full blur-md z-0"
+        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-3 md:h-4 lg:h-5 bg-black/40 rounded-full sm:blur-md z-0"
       >
       </div>
     </div>
   </div>
 
-  <!-- TÍTULO -->
+  <!-- TÍTULOS Y DESCRIPCIÓN -->
   <div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
     <h2
-      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 uppercase"
+      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl -rotate-2 uppercase"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
     >
       {content.title1}
     </h2>
     <h2
-      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 uppercase"
+      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl -rotate-2 uppercase"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
     >
       {content.title2}
     </h2>
     <h2
-      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl drop-shadow-[6px_6px_0_rgba(0,0,0,1)] -rotate-2 uppercase"
+      class="font-lilita font-extrabold text-white text-4xl md:text-6xl lg:text-8xl -rotate-2 uppercase"
+      style="text-shadow: 4px 4px 0 rgba(0,0,0,1);"
     >
       {content.title3}
     </h2>
 
-    <!-- DESCRIPCIÓN -->
     <p
       class="font-lilita mt-6 text-lg md:text-xl text-white/90 max-w-xl mx-auto"
     >
