@@ -1,68 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import Section1 from "../components/Section1.astro";
-import Section2 from "../components/Section2.astro";
-import Section3 from "../components/Section3.astro";
-import Divider from "../components/Divider.astro";
-import FAQs from "../components/FAQs.astro";
-import Footer from "../components/Footer.astro";
-
-import content from "../i18n/es.json";
 ---
 
-<Layout
-  lang="es"
-  title="House of Wardians – Juego de estrategia para móviles"
-  description="House of Wardians es un juego de lucha estratégica con combate automático. Recluta, evoluciona y compite desde tu móvil."
->
-  <div class="relative h-[400vh]">
-    <Hero
-      content={content.hero}
-      androidButton={{
-        link: content.buttonAndroid.href,
-        image: content.buttonAndroid.image,
-        alt: content.buttonAndroid.alt, 
-      }}
-      iosButton={{
-        link: content.buttonIos.href,
-        image: content.buttonIos.image,
-        alt: content.buttonIos.alt
-      }}
-      lang= "es"
-    />
-    <Divider />
-    <Section1
-      content={content.section1}
-      discordButton={{
-        link: content.buttonDiscord.href,
-        image: content.buttonDiscord.image,
-        alt: content.buttonDiscord.alt
-      }}
-    />
-    <Section2 content={content.section2} />
-    <Section3 content={content.section3} />
-    <FAQs
-      content={content.faqs}
-      discordButton={{
-        link: content.buttonDiscord.href,
-        image: content.buttonDiscord.image,
-        alt: content.buttonDiscord.alt
-      }}
-    />
-    <Footer
-      content={content.footer}
-      lang="es"
-      androidButton={{
-        link: content.buttonAndroid.href,
-        image: content.buttonAndroid.image,
-        alt: content.buttonAndroid.alt
-      }}
-      iosButton={{
-        link: content.buttonIos.href,
-        image: content.buttonIos.image,
-        alt: content.buttonIos.alt
-      }}
-    />
-  </div>
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Detectando idioma...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script is:inline>
+      // Detectar si el usuario ya eligió un idioma anteriormente
+      const storedLang = localStorage.getItem('preferredLang');
+      const browserLang = navigator.language || navigator.userLanguage;
+      const langCode = storedLang || (browserLang.startsWith('es') ? 'es' : 'en');
+
+      // Guardar preferencia si no estaba guardada
+      if (!storedLang) {
+        localStorage.setItem('preferredLang', langCode);
+      }
+
+      // Redirigir solo si estamos en la raíz
+      if (window.location.pathname === '/' || window.location.pathname === '') {
+        window.location.replace('/' + langCode + '/');
+      }
+    </script>
+  </head>
+  <body class="bg-black text-white text-center p-10">
+    <p>Redirigiendo al idioma...</p>
+  </body>
+</html>
